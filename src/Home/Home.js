@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-// import Hero from "./Sections/Hero/Hero";
+import Hero from "./Sections/Hero/Hero";
 // import About from "./Sections/About/About";
 // import Projects from "./Sections/Projects/Projects";
 // import Contact from "./Sections/Contact/Contact";
@@ -8,7 +8,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <Fragment>
-      <h1>Hi</h1>
+      <Hero />
     </Fragment>
   );
 };

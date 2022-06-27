@@ -13,6 +13,7 @@ const Footer = () => {
             src={
               "https://cdn.discordapp.com/attachments/788247984517283880/990538566415319040/whiteuparrow.webp"
             }
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           ></img>
           <div className="favicon-div">
             <div className="favicon-img-div">

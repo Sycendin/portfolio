@@ -35,11 +35,13 @@
   display: flex;
   font-size: calc(16px + 0.6vw);
   font-weight: bold;
-
+  margin-bottom: 0%;
 }
 .project-info{
   display: flex;
+  text-align: left;
   font-size: calc(16px + 0.3vw);
+
 
 }
 .project-button-div{

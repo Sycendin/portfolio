@@ -40,7 +40,14 @@ const Projects = () => {
         <div className="projects-div">
           <div className="project-div">
             <p className="project-title">Yu-Gi-Oh! Guessing Game</p>
-            <p className="project-info">Project 1 info</p>
+            <p className="project-info">
+              A Yu-Gi-Oh! guessing game where you need to pick the right monster
+              card to win.
+              <br />
+              You can also search for cards using a filter, generate a random
+              card and view all archetypes in the game and view all cards within
+              that archetype.
+            </p>
             <div className="project-button-div">
               <button
                 className="project-button"
@@ -76,7 +83,12 @@ const Projects = () => {
         <div className="projects-div">
           <div className="project-div">
             <p className="project-title">Toronto Blue Jays Splash Page</p>
-            <p className="project-info">Project 2 info</p>
+            <p className="project-info">
+              A Splash page for the Toronto Blue Jays for their home opener.
+              <br />
+              You can view their twitter timeline, a hype video, view their
+              stats or roster click links to their social media.
+            </p>
             <div className="project-button-div">
               <button
                 className="project-button"

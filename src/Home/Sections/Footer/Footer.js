@@ -23,6 +23,12 @@ const Footer = () => {
                 width={100}
                 height={100}
                 src="https://cdn.discordapp.com/attachments/788247984517283880/990540032576196628/indeed.webp"
+                onClick={() =>
+                  window.open(
+                    "https://my.indeed.com/p/brandons-8tjg866",
+                    "_blank"
+                  )
+                }
               ></img>
               <img
                 alt="github"
@@ -30,6 +36,9 @@ const Footer = () => {
                 width={100}
                 height={100}
                 src="https://cdn.discordapp.com/attachments/788247984517283880/990540032311971880/github.webp"
+                onClick={() =>
+                  window.open("https://github.com/Sycendin", "_blank")
+                }
               ></img>
             </div>
           </div>

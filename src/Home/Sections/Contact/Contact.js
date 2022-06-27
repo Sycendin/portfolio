@@ -9,7 +9,14 @@ const Contact = () => {
           <p className="contact-info">Contact me via email</p>
 
           <div className="contact-button-div">
-            <button className="contact-button">Contact Me</button>
+            <button
+              className="contact-button"
+              onClick={() =>
+                window.open("mailto:brandonshewnarain@gmail.com", "_blank")
+              }
+            >
+              Contact Me
+            </button>
           </div>
         </div>
       </div>

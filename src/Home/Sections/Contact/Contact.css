@@ -12,9 +12,12 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 16px;
+  margin-top: 16px;
   font-size: calc(16px + 1.5vw);
   color: white;
   font-weight: bold;
+
 }
 
 .contact-info-div{
@@ -29,6 +32,7 @@
   color: white;
   font-weight: bold;
   justify-content: left;
+  font-size: calc(16px + 0.1vw);
 }
 .contact-button-div{
   display: flex;
@@ -39,7 +43,7 @@
 }
 .contact-button{
   display: flex;
-  font-size: calc(16px + 0.1vw);
+  font-size: calc(16px + 0.5vw);
   color: rgb(255, 255, 255);
   background-color: transparent;
   border: 2px solid #ffffff;

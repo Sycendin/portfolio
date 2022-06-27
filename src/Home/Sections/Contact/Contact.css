@@ -2,6 +2,7 @@
 .contact-div{
   width: 100%;
   min-height: 10vh;
+  padding-bottom: 16px;
   display: flex;
   flex-direction: column;
   background: rgb(0,146,172);

@@ -21,13 +21,16 @@
 .about-info-div{
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
 }
 .about-info{
   color: white;
   font-weight: bold;
+  width: 100%;
+  max-width: 1140px;
   justify-content: left;
   font-size: calc(16px + 0.3vw);
 }

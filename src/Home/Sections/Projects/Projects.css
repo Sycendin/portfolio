@@ -56,16 +56,17 @@
   display: flex;
   font-size: calc(16px + 0.3vw);
   color: rgb(0, 146, 172);
-  background-color: white;
   width: auto;
   margin-top: 8px;
   letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: inset 0 0 0 0 #bad5e5;
+  box-shadow: inset 0 0 0 0 #c7ebff;
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
   margin-right: 8px;
+  border-radius: 10px;
+  background-color:  #000a0c
 }
 
 .project-button:hover{

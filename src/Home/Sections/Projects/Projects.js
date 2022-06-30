@@ -51,7 +51,7 @@ const Projects = () => {
         <div>
           <p className="projects-section-title">Projects</p>
         </div>
-        <Slide triggerOnce duration={1500}>
+        <Slide triggerOnce delay={250}>
           <div className="projects-div">
             <div className="project-div">
               <p className="project-title">Yu-Gi-Oh! Guessing Game</p>
@@ -99,7 +99,7 @@ const Projects = () => {
           </div>
         </Slide>
         <br />
-        <Slide triggerOnce duration={2000}>
+        <Slide triggerOnce delay={250}>
           <div className="projects-div">
             <div className="project-div">
               <p className="project-title">Toronto Blue Jays Splash Page</p>
@@ -142,7 +142,7 @@ const Projects = () => {
           </div>
         </Slide>
         <br />
-        <Slide triggerOnce duration={3000}>
+        <Slide triggerOnce delay={250}>
           <div className="projects-div">
             <div className="project-div">
               <p className="project-title">Mock Video Game News Site</p>

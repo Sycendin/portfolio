@@ -12,8 +12,10 @@ const Hero = () => {
         <div className="hero-div">
           <div className="content-div">
             <div className="hero-text-span">
-              <p className="hero-text">Hi, my name is </p>
-              <p className="hero-text-name">Brandon Shewnarain</p>
+              <p className="hero-text">
+                Hi, my name is{" "}
+                <span className="hero-text-name"> Brandon Shewnarain</span>
+              </p>
             </div>
             <p className="hero-text">An aspiring Web Developer</p>
             <div>

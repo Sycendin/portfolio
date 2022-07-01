@@ -3,7 +3,9 @@ import "./OtherProjects.css";
 const OtherProjects = () => {
   return (
     <Fragment>
-      <p className="other-title">Other Projects</p>
+      <div className="other-projects-title">
+        <p className="other-title">Other Projects</p>
+      </div>
       <div className="other-div">
         <div className="other-projects">
           <div className="other-info">

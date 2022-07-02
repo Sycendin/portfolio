@@ -14,6 +14,24 @@ const OtherProjects = () => {
               A gallery that showcases some of the Mike Trout drawings drawn
               during the baseball lockout.
             </p>
+            <div className="other-project-button-div">
+              <button
+                className="other-project-button"
+                onClick={() =>
+                  window.open("https://sycendin.github.io/gallery/", "_blank")
+                }
+              >
+                See Live
+              </button>
+              <button
+                className="other-project-button"
+                onClick={() =>
+                  window.open("https://github.com/Sycendin/gallery/", "_blank")
+                }
+              >
+                Source Code
+              </button>
+            </div>
           </div>
           <div className="other-img-div">
             <img
@@ -34,6 +52,28 @@ const OtherProjects = () => {
               code which another user can use to decrypt your secret message{" "}
               <br /> Uses sessions and allows you to customize your profile
             </p>
+            <div className="other-project-button-div">
+              <button
+                disabled
+                className="other-project-button-grey"
+                onClick={() =>
+                  window.open("https://sycendin.github.io/reduxlogin", "_blank")
+                }
+              >
+                See Live
+              </button>
+              <button
+                className="other-project-button"
+                onClick={() =>
+                  window.open(
+                    "https://github.com/Sycendin/reduxlogin",
+                    "_blank"
+                  )
+                }
+              >
+                Source Code
+              </button>
+            </div>
           </div>
           <div className="other-img-div">
             <img
@@ -52,6 +92,24 @@ const OtherProjects = () => {
               A Pong game played against a computer <br /> You can customize the
               difficulty and your pong paddle.
             </p>
+            <div className="other-project-button-div">
+              <button
+                className="other-project-button"
+                onClick={() =>
+                  window.open("https://sycendin.github.io/pong", "_blank")
+                }
+              >
+                See Live
+              </button>
+              <button
+                className="other-project-button"
+                onClick={() =>
+                  window.open("https://github.com/Sycendin/pong", "_blank")
+                }
+              >
+                Source Code
+              </button>
+            </div>
           </div>
           <div className="other-img-div">
             <img

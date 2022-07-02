@@ -1,6 +1,7 @@
 .other-projects-title{
   width: 100%;
   margin-bottom: 8px;
+  color: white;
   background: rgb(0,146,172);
   background: linear-gradient(90deg, rgba(0,146,172,1) 0%, rgba(0,212,255,1) 100%);
 }

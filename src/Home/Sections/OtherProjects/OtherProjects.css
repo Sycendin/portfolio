@@ -17,9 +17,16 @@
 .other-projects{
   display: flex;
   flex-direction: row;
-  width: 50%
+  width: calc(50% - 16px);
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background-color: rgb(216, 232, 238);
+  border-radius: 10px;
+
 }
 .other-info{
+  padding-left: 8px;
   text-align: left;
   width: 70%
 }
@@ -74,10 +81,13 @@
   color: white;
 }
 .other-img-div{
+  padding-right: 8px;
   width: 30%;
+  display: flex;
+  align-items: center;
 }
 .other-img{
-
-width: 100%;
-height: auto
+  border-radius: 10px;
+  width: 100%;
+  height: auto
 }

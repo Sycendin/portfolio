@@ -42,7 +42,7 @@ const Footer = () => {
               ></img>
             </div>
           </div>
-          <p className="footer-text">Website Developed by Brandon Shewnarain</p>
+          <p className="footer-text">Website Developed By Brandon Shewnarain</p>
         </div>
       </div>
     </Fragment>

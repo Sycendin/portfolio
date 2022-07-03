@@ -84,3 +84,94 @@
 .project-img:hover{
   transition: transform 300ms ease-in-out 0s;
 }
+
+
+@media  (max-width: 870px) {
+  .projects-section-div{
+    width: 80%;
+  }
+  .project-title{
+    display: flex;
+    justify-content: center;
+  }
+  .projects-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+  }
+  .project-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 8px;
+
+  }
+  .project-button-div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+  .project-button{
+    font-size: calc(16px);
+  }
+  .project-img{
+    display: flex;
+    justify-content: center;
+  }
+
+
+}
+
+@media  (max-width: 550px) {
+  .projects-section-div{
+    width: 90%;
+  }
+  .project-title{
+    display: flex;
+    justify-content: center;
+  }
+  .projects-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+  }
+  .project-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 8px;
+
+  }
+  .project-button-div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .project-button{
+    font-size: calc(16px);
+  }
+  .project-img{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+
+}

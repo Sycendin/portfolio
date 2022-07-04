@@ -34,6 +34,12 @@
   justify-content: left;
   font-size: calc(16px + 0.3vw);
 }
+.skils{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
 .info-div{
   width: 100%;
   max-width: 1140px;

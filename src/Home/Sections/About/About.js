@@ -23,7 +23,7 @@ const About = () => {
           </Fade>
           <p className="about-title">Skills/Knowledge</p>
           <div className="info-div">
-            <p className="about-info">
+            <div className="about-info">
               <div className="skills">
                 <p className="about-info">- Javascript</p>
                 <p className="about-info">- HTML</p>
@@ -34,7 +34,7 @@ const About = () => {
                 <p className="about-info">- Typescript</p>
                 <p className="about-info">- PERN Apps</p>
               </div>
-            </p>
+            </div>
           </div>
           <Fade duration={4000} triggerOnce>
             <div className="about-button-div">

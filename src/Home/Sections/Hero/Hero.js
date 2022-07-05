@@ -1,7 +1,11 @@
 import React, { Fragment } from "react";
+import { useMode } from "../../ModeContext/ModeContext";
+
 import { Fade } from "react-awesome-reveal";
 import "./Hero.css";
 const Hero = () => {
+  const mode = useMode();
+  console.log(mode);
   const aboutMe = () => {
     const scrollDiv = document.getElementById("about").offsetTop;
     window.scrollTo({ top: scrollDiv, behavior: "smooth" });

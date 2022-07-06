@@ -10,10 +10,10 @@ const Contact = () => {
         </AttentionSeeker>
 
         <div className="contact-info-div">
-          <Fade duration={2000} triggerOnce>
+          <Fade duration={1000} triggerOnce>
             <p className="contact-info">Contact me via email</p>
           </Fade>
-          <Fade duration={3000} triggerOnce>
+          <Fade duration={2000} triggerOnce>
             <div className="contact-button-div">
               <button
                 className="contact-button"

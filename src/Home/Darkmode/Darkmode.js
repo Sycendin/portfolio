@@ -15,8 +15,10 @@ const Darkmode = () => {
   const update = () => {
     if (mode === "light") {
       updateMode("dark");
+      window.localStorage.setItem("mode", "dark");
     } else {
       updateMode("light");
+      window.localStorage.setItem("mode", "light");
     }
   };
 

@@ -9,9 +9,13 @@
 
 }
 .content-div{
-  margin-top: 40vh;
+  padding-top: 40vh;
 }
-
+.content-div.dark{
+  background-color: rgb(65, 79, 95);
+  padding-top: 40vh;
+  padding-bottom: 35vh;
+}
 .hero-text-span{
   text-align: left;
 }
@@ -45,11 +49,23 @@
   transition: background-position 0.3s;
   border-radius: 10px;
 }
+.hero-button.dark{
+  background: linear-gradient(to right, #1babff 0%, #41c4ce 50%, rgb(216, 232, 238) 50%, rgb(216, 232, 238) 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
 .hero-button:hover{
   background-position:0 0;
   color: white;
 }
 
+.hero-text.light{
+  color: black;
+}
+
+.hero-text.dark{
+  color: #ffffff;
+}
 @media  (max-width: 870px) {
   .hero-div{
     width: 80%;

@@ -1,7 +1,11 @@
 import React, { Fragment } from "react";
+import { useMode } from "../../ModeContext/ModeContext";
+
 import { Fade } from "react-awesome-reveal";
 import "./Hero.css";
 const Hero = () => {
+  const mode = useMode();
+  // console.log(mode);
   const aboutMe = () => {
     const scrollDiv = document.getElementById("about").offsetTop;
     window.scrollTo({ top: scrollDiv, behavior: "smooth" });
@@ -9,18 +13,21 @@ const Hero = () => {
   return (
     <Fragment>
       <Fade duration={2000} triggerOnce>
-        <div className="hero-div">
-          <div className="content-div">
+        <div className={`hero-div ${mode}`}>
+          <div className={`content-div ${mode}`}>
             <div className="hero-text-span">
-              <p className="hero-text">
+              <p className={`hero-text ${mode}`}>
                 Hi, my name is{" "}
                 <span className="hero-text-name"> Brandon Shewnarain</span>
               </p>
             </div>
-            <p className="hero-text">An aspiring Web Developer</p>
+            <p className={`hero-text ${mode}`}>An aspiring Web Developer</p>
             <div>
               <Fade duration={4000} triggerOnce>
-                <button className="hero-button" onClick={() => aboutMe()}>
+                <button
+                  className={`hero-button ${mode}`}
+                  onClick={() => aboutMe()}
+                >
                   Know more
                 </button>
               </Fade>

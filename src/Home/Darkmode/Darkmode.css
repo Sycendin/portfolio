@@ -1,0 +1,14 @@
+.darkmode-div{
+display: flex;
+justify-content: right;
+}
+
+.darkmode-img{
+width: 50px;
+height: auto;
+cursor: pointer;
+}
+
+.darkmode-img:hover{
+  filter: brightness(110%);
+}

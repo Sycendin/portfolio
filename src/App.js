@@ -4,9 +4,6 @@ import NotFound from "./NotFound/NotFound";
 import "./App.css";
 import Home from "./Home/Home";
 import { ModeProvider } from "./Home/ModeContext/ModeContext";
-
-export const ModeContext = React.createContext();
-
 function App() {
   return (
     <div className="App">

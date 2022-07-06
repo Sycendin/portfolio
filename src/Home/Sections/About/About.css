@@ -34,11 +34,26 @@
   justify-content: left;
   font-size: calc(16px + 0.3vw);
 }
-.skils{
+.skills-div{
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 8px;
+
+}
+.skills-text{
+  display: flex;
+  width: auto;
+  font-size: calc(16px + 0.5vw);
+  margin-right: 8px;
+  font-weight: bold;
+  color: white;
+ 
 }
 .info-div{
   width: 100%;

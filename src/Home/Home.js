@@ -6,19 +6,23 @@ import Projects from "./Sections/Projects/Projects";
 import OtherProjects from "./Sections/OtherProjects/OtherProjects";
 import Contact from "./Sections/Contact/Contact";
 import Footer from "./Sections/Footer/Footer";
+import { useMode } from "./ModeContext/ModeContext";
 import "./Home.css";
 
 const Home = () => {
   // console.log(mode);
+  const mode = useMode();
   return (
     <Fragment>
-      <Darkmode />
-      <Hero />
-      <About />
-      <Projects />
-      <OtherProjects />
-      <Contact />
-      <Footer />
+      <div className={`home ${mode}`}>
+        <Darkmode />
+        <Hero />
+        <About />
+        <Projects />
+        <OtherProjects />
+        <Contact />
+        <Footer />
+      </div>
     </Fragment>
   );
 };

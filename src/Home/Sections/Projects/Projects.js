@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { useMode } from "../../ModeContext/ModeContext";
 import { Slide } from "react-awesome-reveal";
 import "./Projects.css";
 const Projects = () => {
@@ -11,6 +12,7 @@ const Projects = () => {
   const [img3, setImg3] = useState(
     "https://cdn.discordapp.com/attachments/788247984517283880/990884108550959124/newsp1.webp"
   );
+  const mode = useMode();
   // Switch between images depending on mouse enter/leave
   const imgSwitch = (img, mouse) => {
     if (img === 1) {
@@ -49,7 +51,7 @@ const Projects = () => {
     <Fragment>
       <div className="projects-section-div">
         <div>
-          <p className="projects-section-title">Projects</p>
+          <p className={`projects-section-title ${mode}`}>Projects</p>
         </div>
         <Slide triggerOnce delay={250}>
           <div className="projects-div">

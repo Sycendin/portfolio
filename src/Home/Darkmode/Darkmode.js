@@ -7,12 +7,12 @@ const Darkmode = () => {
   let darkModeImg = "";
   if (mode === "light") {
     darkModeImg =
-      "https://cdn.discordapp.com/attachments/788247984517283880/993877841294925999/sun.webp";
+      "https://cdn.discordapp.com/attachments/788247984517283880/993877801285459988/moon.webp";
   } else {
     darkModeImg =
-      "https://cdn.discordapp.com/attachments/788247984517283880/993877801285459988/moon.webp";
+      "https://cdn.discordapp.com/attachments/788247984517283880/993877841294925999/sun.webp";
   }
-  const update = (e) => {
+  const update = () => {
     if (mode === "light") {
       updateMode("dark");
     } else {

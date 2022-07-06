@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { data } from "./OtherProjectsData.js";
+import { Fade } from "react-awesome-reveal";
 import "./OtherProjectsM.css";
 const OtherProjectsM = () => {
   const [select, setSelect] = useState(0);
@@ -28,9 +29,11 @@ const OtherProjectsM = () => {
   };
   return (
     <Fragment>
-      <div className="other-projects-title">
-        <p className="other-title">Other Projects</p>
-      </div>
+      <Fade duration={2000} triggerOnce>
+        <div className="other-projects-title">
+          <p className="other-title">Other Projects</p>
+        </div>
+      </Fade>
       <div className="mobile-projects">
         <div className="mobile-projects-info">
           <p className="mobile-projects-title">{data[select].title}</p>

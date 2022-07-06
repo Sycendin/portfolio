@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import OtherProjectsM from "./OtherProjectsMobile/OtherProjectsM";
+import { Fade } from "react-awesome-reveal";
 import "./OtherProjects.css";
 
 const OtherProjects = () => {
@@ -14,6 +15,8 @@ const OtherProjects = () => {
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // If width is small enough, render condensed other projects
   if (width <= 870) {
     return (
       <Fragment>
@@ -23,9 +26,11 @@ const OtherProjects = () => {
   } else {
     return (
       <Fragment>
-        <div className="other-projects-title">
-          <p className="other-title">Other Projects</p>
-        </div>
+        <Fade duration={2000} triggerOnce>
+          <div className="other-projects-title">
+            <p className="other-title">Other Projects</p>
+          </div>
+        </Fade>
         <div className="other-div">
           <div className="other-projects">
             <div className="other-info">

@@ -5,9 +5,11 @@ import "./App.css";
 import Home from "./Home/Home";
 import { ModeProvider } from "./Home/ModeContext/ModeContext";
 function App() {
+  let exist = window.localStorage.getItem("mode");
+
   return (
     <div className="App">
-      <ModeProvider value="light">
+      <ModeProvider value={exist ? exist : "light"}>
         <BrowserRouter>
           <Routes>
             <Route

@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { useMode } from "../../ModeContext/ModeContext";
 import { Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 import "./Projects.css";
 const Projects = () => {
   const [img1, setImg1] = useState(
@@ -85,6 +86,15 @@ const Projects = () => {
                 >
                   Source Code
                 </button>
+                {/* <Link to="/onboarding/profile" state={{ from: "occupation" }}>
+                  Next Step
+                </Link> */}
+                <Link
+                  to="/portfolio/home/game/"
+                  style={{ textDecoration: "none" }}
+                >
+                  <button className="project-button">Features</button>
+                </Link>
               </div>
             </div>
             <img

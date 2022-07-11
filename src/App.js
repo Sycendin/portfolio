@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import NotFound from "./NotFound/NotFound";
 import "./App.css";
 import Home from "./Home/Home";
+import Features from "./Home/Features/Features";
 import { ModeProvider } from "./Home/ModeContext/ModeContext";
 function App() {
   let exist = window.localStorage.getItem("mode");
@@ -18,6 +19,7 @@ function App() {
             />
             <Route path="*" element={<NotFound />} />
             <Route path="/portfolio/home/" element={<Home />} />
+            <Route path="/portfolio/home/game/" element={<Features />} />
           </Routes>
         </BrowserRouter>
       </ModeProvider>

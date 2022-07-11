@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { data } from "./OtherProjectsData.js";
 import { Fade } from "react-awesome-reveal";
+
 import "./OtherProjectsM.css";
 const OtherProjectsM = () => {
   const [select, setSelect] = useState(0);

@@ -18,14 +18,32 @@ const Features = () => {
       <div className={`home ${mode}`}>
         <Darkmode />
         <Fragment>
-          {data.map((element, i) => {
-            return (
-              <div key={i} className="feature-div">
-                <p className="feature-text">{element.title}</p>
-                <p className="feature-text">{element.text}</p>
-              </div>
-            );
-          })}
+          <div>
+            <p className={`projects-section-title ${mode}`}>Projects</p>
+          </div>
+          <div className="features-div">
+            {data.map((element, i) => {
+              return (
+                <Fragment>
+                  <div className="feature-div">
+                    <div className="feature-info">
+                      <p className="feature-title">{element.title}</p>
+                      {element.text.split("#break").map((line, i) => {
+                        return <p className="feature-text">{line}</p>;
+                      })}
+                    </div>
+                    <img
+                      alt="feature"
+                      className="feature-img"
+                      height={512}
+                      width={512}
+                      src={element.image}
+                    />
+                  </div>
+                </Fragment>
+              );
+            })}
+          </div>
         </Fragment>
       </div>
     </Fragment>

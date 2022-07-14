@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
+import { ModeProvider } from "./Home/ModeContext/ModeContext";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import NotFound from "./NotFound/NotFound";
-import "./App.css";
 import Home from "./Home/Home";
 import Features from "./Home/Features/Features";
 import Footer from "./Home/Sections/Footer/Footer";
-import { ModeProvider } from "./Home/ModeContext/ModeContext";
+import "./App.css";
 function App() {
   let exist = window.localStorage.getItem("mode");
 
@@ -14,10 +14,12 @@ function App() {
       <ModeProvider value={exist ? exist : "light"}>
         <BrowserRouter>
           <Routes>
+            {/* Change url to /home/ on page visit */}
             <Route
               path="/portfolio/"
               element={<Navigate to="/portfolio/home/" replace />}
             />
+            {/* Return NotFound page for wrong URL */}
             <Route path="*" element={<NotFound />} />
             <Route path="/portfolio/home/" element={<Home />} />
             <Route

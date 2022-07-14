@@ -34,6 +34,9 @@ const About = () => {
               <div className="skills-text">- Redux</div>
               <div className="skills-text">- Typescript</div>
               <div className="skills-text">- PERN Apps</div>
+              <div className="skills-text">- MySQL</div>
+              <div className="skills-text">- Git</div>
+              <div className="skills-text">- Python</div>
             </div>
           </Fade>
           <Fade duration={2000} triggerOnce>

@@ -62,3 +62,11 @@
   transition: all 0.2s ease-in-out;
   transform: translate(0,-5px);
 }
+
+
+@media  (max-width: 600px) {
+  .footer-contents{
+    width: 80%;
+  }
+  
+  }

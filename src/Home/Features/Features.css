@@ -31,6 +31,8 @@
 
 .feature-text {
   font-size: calc(16px + 0.1vw);
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
 .feature-img {

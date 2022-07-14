@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import NotFound from "./NotFound/NotFound";
 import "./App.css";
 import Home from "./Home/Home";
 import Features from "./Home/Features/Features";
+import Footer from "./Home/Sections/Footer/Footer";
 import { ModeProvider } from "./Home/ModeContext/ModeContext";
 function App() {
   let exist = window.localStorage.getItem("mode");
@@ -19,7 +20,14 @@ function App() {
             />
             <Route path="*" element={<NotFound />} />
             <Route path="/portfolio/home/" element={<Home />} />
-            <Route path="/portfolio/home/game/" element={<Features />} />
+            <Route
+              path="/portfolio/home/game/"
+              element={
+                <Fragment>
+                  <Features /> <Footer />
+                </Fragment>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </ModeProvider>

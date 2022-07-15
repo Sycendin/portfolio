@@ -30,13 +30,14 @@ const About = () => {
               <div className="skills-text">- HTML</div>
               <div className="skills-text">- CSS</div>
               <div className="skills-text">- React</div>
+              <div className="skills-text">- NPM</div>
               <div className="skills-text">- PWA</div>
               <div className="skills-text">- Redux</div>
               <div className="skills-text">- Typescript</div>
-              <div className="skills-text">- PERN Apps</div>
+              <div className="skills-text">- PERN Apps with Node.js</div>
               <div className="skills-text">- MySQL</div>
               <div className="skills-text">- Git</div>
-              <div className="skills-text">- Python</div>
+              <div className="skills-text">- Basic Python Knowledge</div>
             </div>
           </Fade>
           <Fade duration={2000} triggerOnce>

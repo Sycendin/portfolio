@@ -48,12 +48,27 @@ const OtherProjectsM = () => {
             >
               See Live
             </button>
-            <button
-              className="mobile-projects-button"
-              onClick={() => window.open(`${data[select].links[1]}`, "_blank")}
-            >
-              Source Code
-            </button>
+            {/* Disabled button for secret message live demo */}
+            {data[select].title === "Secret Message" ? (
+              <button
+                disabled
+                className="mobile-projects-button"
+                onClick={() =>
+                  window.open(`${data[select].links[1]}`, "_blank")
+                }
+              >
+                Source Code
+              </button>
+            ) : (
+              <button
+                className="mobile-projects-button"
+                onClick={() =>
+                  window.open(`${data[select].links[1]}`, "_blank")
+                }
+              >
+                Source Code
+              </button>
+            )}
           </div>
         </div>
         <div className="mobile-projects-img-div">

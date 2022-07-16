@@ -70,10 +70,7 @@ const Projects = () => {
                 <button
                   className="project-button"
                   onClick={() =>
-                    window.open(
-                      "https://sycendin.github.io/game/game/",
-                      "_blank"
-                    )
+                    window.open("https://sycendin.github.io/game/", "_blank")
                   }
                 >
                   See Live
@@ -125,7 +122,7 @@ const Projects = () => {
                 <button
                   className="project-button"
                   onClick={() =>
-                    window.open("https://github.com/Sycendin/promo/", "_blank")
+                    window.open("https://sycendin.github.io/promo/", "_blank")
                   }
                 >
                   See Live
@@ -133,7 +130,7 @@ const Projects = () => {
                 <button
                   className="project-button"
                   onClick={() =>
-                    window.open("https://sycendin.github.io/promo/", "_blank")
+                    window.open("https://github.com/Sycendin/promo/", "_blank")
                   }
                 >
                   Source Code
@@ -167,7 +164,7 @@ const Projects = () => {
                 <button
                   className="project-button"
                   onClick={() =>
-                    window.open("https://github.com/Sycendin/news/", "_blank")
+                    window.open("https://sycendin.github.io/news/", "_blank")
                   }
                 >
                   See Live
@@ -175,7 +172,7 @@ const Projects = () => {
                 <button
                   className="project-button"
                   onClick={() =>
-                    window.open("https://sycendin.github.io/news/", "_blank")
+                    window.open("https://github.com/Sycendin/news/", "_blank")
                   }
                 >
                   Source Code

@@ -40,35 +40,33 @@ const OtherProjectsM = () => {
           <p className="mobile-projects-title">{data[select].title}</p>
           <p className="mobile-projects-text">{data[select].text}</p>
           <div className="mobile-projects-button-div">
-            <button
-              disabled
-              // className="mobile-projects-button-grey"'
-              className="mobile-projects-button"
-              onClick={() => window.open(`${data[select].links[0]}`, "_blank")}
-            >
-              See Live
-            </button>
             {/* Disabled button for secret message live demo */}
             {data[select].title === "Secret Message" ? (
               <button
                 disabled
-                className="mobile-projects-button"
+                className="mobile-projects-button-grey"
                 onClick={() =>
-                  window.open(`${data[select].links[1]}`, "_blank")
+                  window.open(`${data[select].links[0]}`, "_blank")
                 }
               >
-                Source Code
+                See Live
               </button>
             ) : (
               <button
                 className="mobile-projects-button"
                 onClick={() =>
-                  window.open(`${data[select].links[1]}`, "_blank")
+                  window.open(`${data[select].links[0]}`, "_blank")
                 }
               >
-                Source Code
+                See Live
               </button>
             )}
+            <button
+              className="mobile-projects-button"
+              onClick={() => window.open(`${data[select].links[1]}`, "_blank")}
+            >
+              Source Code
+            </button>
           </div>
         </div>
         <div className="mobile-projects-img-div">

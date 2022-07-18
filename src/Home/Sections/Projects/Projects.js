@@ -50,7 +50,7 @@ const Projects = () => {
   };
   return (
     <Fragment>
-      <div className="projects-section-div">
+      <div id="projects" className="projects-section-div">
         <div>
           <p className={`projects-section-title ${mode}`}>Projects</p>
         </div>

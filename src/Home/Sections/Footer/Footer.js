@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <Fragment>
-      <div className="footer-div">
+      <div id="footer" className="footer-div">
         <div className="footer-contents">
           <img
             alt="top-arrow"

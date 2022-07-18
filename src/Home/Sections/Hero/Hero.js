@@ -5,9 +5,8 @@ import { Fade } from "react-awesome-reveal";
 import "./Hero.css";
 const Hero = () => {
   const mode = useMode();
-  // console.log(mode);
-  const aboutMe = () => {
-    const scrollDiv = document.getElementById("about").offsetTop;
+  const aboutMe = (section) => {
+    const scrollDiv = document.getElementById(section).offsetTop;
     window.scrollTo({ top: scrollDiv, behavior: "smooth" });
   };
   return (
@@ -22,13 +21,37 @@ const Hero = () => {
               </p>
             </div>
             <p className={`hero-text ${mode}`}>An aspiring Web Developer</p>
-            <div>
+            <div className="hero-button-div">
               <Fade duration={4000} triggerOnce>
                 <button
                   className={`hero-button ${mode}`}
-                  onClick={() => aboutMe()}
+                  onClick={() => aboutMe("about")}
                 >
-                  Know more
+                  About
+                </button>
+                <button
+                  className={`hero-button ${mode}`}
+                  onClick={() => aboutMe("projects")}
+                >
+                  Projects
+                </button>
+                <button
+                  className={`hero-button ${mode}`}
+                  onClick={() => aboutMe("other-projects")}
+                >
+                  Other Projects
+                </button>
+                <button
+                  className={`hero-button ${mode}`}
+                  onClick={() => aboutMe("contact")}
+                >
+                  Contact Me
+                </button>
+                <button
+                  className={`hero-button ${mode}`}
+                  onClick={() => aboutMe("footer")}
+                >
+                  Other Links
                 </button>
               </Fade>
             </div>

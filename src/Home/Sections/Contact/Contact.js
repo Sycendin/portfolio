@@ -4,7 +4,7 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <Fragment>
-      <div className="contact-div">
+      <div id="contact" className="contact-div">
         <AttentionSeeker effect="tada" triggerOnce>
           <p className="contact-title">Contact</p>
         </AttentionSeeker>

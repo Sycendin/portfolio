@@ -33,7 +33,11 @@
   margin-top: 0%;
   margin-bottom: 0%;
 }
-
+.hero-button-div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .hero-button{
   display: flex;
   font-size: calc(16px + 0.5vw);
@@ -89,6 +93,9 @@
     font-size: calc(16px + 0.0vw);
   }
   .hero-text-name{
+    font-size: calc(16px + 0.0vw);
+  }
+  .hero-button{
     font-size: calc(16px + 0.0vw);
   }
 

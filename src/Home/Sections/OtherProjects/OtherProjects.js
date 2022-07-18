@@ -27,7 +27,7 @@ const OtherProjects = () => {
     return (
       <Fragment>
         <Fade duration={2000} triggerOnce>
-          <div className="other-projects-title">
+          <div id="other-projects" className="other-projects-title">
             <p className="other-title">Other Projects</p>
           </div>
         </Fade>

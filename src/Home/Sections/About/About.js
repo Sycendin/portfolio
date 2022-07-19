@@ -38,7 +38,17 @@ const About = () => {
           </Fade>
           <Fade duration={2000} triggerOnce>
             <div className="about-button-div">
-              <button className="about-button">View Resume</button>
+              <button
+                className="about-button"
+                onClick={() =>
+                  window.open(
+                    "https://cdn.discordapp.com/attachments/747928182891610213/998462332642537572/WebDevResume.pdf",
+                    "_blank"
+                  )
+                }
+              >
+                View Resume
+              </button>
             </div>
           </Fade>
         </div>

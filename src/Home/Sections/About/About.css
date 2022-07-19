@@ -33,6 +33,8 @@
   max-width: 1140px;
   justify-content: left;
   font-size: calc(16px + 0.3vw);
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 .skills-div{
   display: flex;
@@ -51,8 +53,11 @@
   width: auto;
   font-size: calc(16px + 0.5vw);
   margin-right: 8px;
+  margin-top: 0%;
+  margin-bottom: 0%;
   font-weight: bold;
   color: white;
+  
  
 }
 .info-div{

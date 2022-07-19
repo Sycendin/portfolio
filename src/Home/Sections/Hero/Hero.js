@@ -43,6 +43,17 @@ const Hero = () => {
                 </button>
                 <button
                   className={`hero-button ${mode}`}
+                  onClick={() =>
+                    window.open(
+                      "https://cdn.discordapp.com/attachments/747928182891610213/998462332642537572/WebDevResume.pdf",
+                      "_blank"
+                    )
+                  }
+                >
+                  Resume
+                </button>
+                <button
+                  className={`hero-button ${mode}`}
                   onClick={() => aboutMe("contact")}
                 >
                   Contact Me

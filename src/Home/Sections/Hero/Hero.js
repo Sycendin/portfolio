@@ -1,13 +1,20 @@
 import React, { Fragment } from "react";
 import { useMode } from "../../ModeContext/ModeContext";
-
+import { heroButtonData } from "./Herodata/Herodata";
 import { Fade } from "react-awesome-reveal";
 import "./Hero.css";
 const Hero = () => {
   const mode = useMode();
   const aboutMe = (section) => {
-    const scrollDiv = document.getElementById(section).offsetTop;
-    window.scrollTo({ top: scrollDiv, behavior: "smooth" });
+    if (section === "pdf") {
+      window.open(
+        "https://cdn.discordapp.com/attachments/747928182891610213/998462332642537572/WebDevResume.pdf",
+        "_blank"
+      );
+    } else {
+      const scrollDiv = document.getElementById(section).offsetTop;
+      window.scrollTo({ top: scrollDiv, behavior: "smooth" });
+    }
   };
   return (
     <Fragment>
@@ -23,47 +30,18 @@ const Hero = () => {
             <p className={`hero-text ${mode}`}>An aspiring Web Developer</p>
             <div className="hero-button-div">
               <Fade duration={4000} triggerOnce>
-                <button
-                  className={`hero-button ${mode}`}
-                  onClick={() => aboutMe("about")}
-                >
-                  About
-                </button>
-                <button
-                  className={`hero-button ${mode}`}
-                  onClick={() => aboutMe("projects")}
-                >
-                  Projects
-                </button>
-                <button
-                  className={`hero-button ${mode}`}
-                  onClick={() => aboutMe("other-projects")}
-                >
-                  Other Projects
-                </button>
-                <button
-                  className={`hero-button ${mode}`}
-                  onClick={() =>
-                    window.open(
-                      "https://cdn.discordapp.com/attachments/747928182891610213/998462332642537572/WebDevResume.pdf",
-                      "_blank"
-                    )
-                  }
-                >
-                  Resume
-                </button>
-                <button
-                  className={`hero-button ${mode}`}
-                  onClick={() => aboutMe("contact")}
-                >
-                  Contact Me
-                </button>
-                <button
-                  className={`hero-button ${mode}`}
-                  onClick={() => aboutMe("footer")}
-                >
-                  Other Links
-                </button>
+                {heroButtonData.map((button, i) => {
+                  return (
+                    <Fragment key={i}>
+                      <button
+                        className={`hero-button ${mode}`}
+                        onClick={() => aboutMe(button.link)}
+                      >
+                        {button.title}
+                      </button>
+                    </Fragment>
+                  );
+                })}
               </Fade>
             </div>
           </div>

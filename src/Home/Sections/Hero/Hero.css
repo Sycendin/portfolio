@@ -90,10 +90,10 @@
     flex-wrap: wrap;
   }
   .hero-text{
-    font-size: calc(16px + 0.0vw);
+    font-size: calc(16px + 1vw);
   }
   .hero-text-name{
-    font-size: calc(16px + 0.0vw);
+    font-size: calc(16px + 1vw);
   }
   .hero-button{
     font-size: calc(16px + 0.0vw);

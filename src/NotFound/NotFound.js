@@ -5,10 +5,12 @@ const NotFound = () => {
   return (
     <Fragment>
       {" "}
-      <h1>404 - Not Found!</h1>
-      <Link to="portfolio/home/">
-        <button>Go Back Home</button>
-      </Link>
+      <div className="not-found-div">
+        <h1>404 - Not Found!</h1>
+        <Link to="/portfolio/home/">
+          <button>Go Back Home</button>
+        </Link>
+      </div>
       {/* <Link to="/">Go Home</Link> */}
     </Fragment>
   );

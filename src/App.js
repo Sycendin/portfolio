@@ -23,7 +23,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/portfolio/home/" element={<Home />} />
             <Route
-              path="/portfolio/home/game/"
+              path="/portfolio/home/:id/"
               element={
                 <Fragment>
                   <Features /> <Footer />

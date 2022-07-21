@@ -135,6 +135,12 @@ const Projects = () => {
                 >
                   Source Code
                 </button>
+                <Link
+                  to="/portfolio/home/promo/"
+                  style={{ textDecoration: "none" }}
+                >
+                  <button className="project-button">Features</button>
+                </Link>
               </div>
             </div>
             <img
@@ -177,6 +183,12 @@ const Projects = () => {
                 >
                   Source Code
                 </button>
+                <Link
+                  to="/portfolio/home/news/"
+                  style={{ textDecoration: "none" }}
+                >
+                  <button className="project-button">Features</button>
+                </Link>
               </div>
             </div>
             <img

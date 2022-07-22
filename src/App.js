@@ -20,7 +20,15 @@ function App() {
               element={<Navigate to="/portfolio/home/" replace />}
             />
             {/* Return NotFound page for wrong URL */}
-            <Route path="*" element={<NotFound />} />
+            <Route
+              path="*"
+              element={
+                <Fragment>
+                  <NotFound />
+                  <Footer />
+                </Fragment>
+              }
+            />
             <Route path="/portfolio/home/" element={<Home />} />
             <Route
               path="/portfolio/home/:id/"

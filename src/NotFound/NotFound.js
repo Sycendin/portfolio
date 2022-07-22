@@ -6,10 +6,14 @@ const NotFound = () => {
     <Fragment>
       {" "}
       <div className="not-found-div">
-        <h1>404 - Not Found!</h1>
-        <Link to="/portfolio/home/">
-          <button>Go Back Home</button>
-        </Link>
+        <div className="not-found-content">
+          <h1>404 - Not Found!</h1>
+          <div className="not-found-button-div">
+            <Link to="/portfolio/home/" style={{ textDecoration: "none" }}>
+              <button>Go Back Home</button>
+            </Link>
+          </div>
+        </div>
       </div>
       {/* <Link to="/">Go Home</Link> */}
     </Fragment>

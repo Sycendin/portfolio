@@ -1,3 +1,16 @@
 .not-found-div{
+
   min-height: 100vh;
+
+}
+
+.not-found-content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.not-found-button-div{
+  display: flex;
+  justify-content: center;
 }

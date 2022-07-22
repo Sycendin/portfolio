@@ -50,6 +50,12 @@ export const dataPromo = [
     image:
       "https://cdn.discordapp.com/attachments/747928182891610213/997053316896923708/mobile.webp",
   },
+  {
+    title: "Image Optimization",
+    text: "The images used on the website are in webp format and optimized. #break Compression sites such as Tinify have been used to compress the images in order to reduce the size of the image and thus the download time.",
+    image:
+      "https://cdn.discordapp.com/attachments/747928182891610213/999528485510987856/tinify.webp",
+  },
 ];
 
 export const dataNews = [

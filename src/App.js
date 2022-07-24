@@ -7,11 +7,11 @@ import Features from "./Home/Features/Features";
 import Footer from "./Home/Sections/Footer/Footer";
 import "./App.css";
 function App() {
-  let exist = window.localStorage.getItem("mode");
+  let whichMode = window.localStorage.getItem("mode");
 
   return (
     <div className="App">
-      <ModeProvider value={exist ? exist : "light"}>
+      <ModeProvider value={whichMode ? whichMode : "light"}>
         <BrowserRouter>
           <Routes>
             {/* Change url to /home/ on page visit */}

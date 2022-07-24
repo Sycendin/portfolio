@@ -41,7 +41,7 @@ const OtherProjects = () => {
               </p>
               <div className="other-project-button-div">
                 <button
-                  className="other-project-button"
+                  className="other-project-button project-buton"
                   onClick={() =>
                     window.open("https://sycendin.github.io/gallery/", "_blank")
                   }
@@ -49,7 +49,7 @@ const OtherProjects = () => {
                   See Live
                 </button>
                 <button
-                  className="other-project-button"
+                  className="other-project-button "
                   onClick={() =>
                     window.open(
                       "https://github.com/Sycendin/gallery/",
@@ -84,7 +84,7 @@ const OtherProjects = () => {
               <div className="other-project-button-div">
                 <button
                   disabled
-                  className="other-project-button-grey"
+                  className="other-project-button-grey project-buton"
                   onClick={() =>
                     window.open(
                       "https://sycendin.github.io/reduxlogin",
@@ -95,7 +95,7 @@ const OtherProjects = () => {
                   See Live
                 </button>
                 <button
-                  className="other-project-button"
+                  className="other-project-button project-buton"
                   onClick={() =>
                     window.open(
                       "https://github.com/Sycendin/reduxlogin",
@@ -126,7 +126,7 @@ const OtherProjects = () => {
               </p>
               <div className="other-project-button-div">
                 <button
-                  className="other-project-button"
+                  className="other-project-button project-buton"
                   onClick={() =>
                     window.open("https://sycendin.github.io/pong", "_blank")
                   }
@@ -134,7 +134,7 @@ const OtherProjects = () => {
                   See Live
                 </button>
                 <button
-                  className="other-project-button"
+                  className="other-project-button project-buton"
                   onClick={() =>
                     window.open("https://github.com/Sycendin/pong", "_blank")
                   }

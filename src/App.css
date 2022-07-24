@@ -26,6 +26,8 @@ button{
   transition: background-position 0.3s;
   border-radius: 10px;
 }
+
+
 button:hover{
   background-position:0 0;
   color: white;

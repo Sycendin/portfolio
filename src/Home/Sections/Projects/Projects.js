@@ -15,19 +15,25 @@ const Projects = () => {
   );
   const mode = useMode();
   // Switch between images depending on mouse enter/leave
-  const imgSwitch = (img, mouse) => {
+  const imgSwitch = (img) => {
     if (img === 1) {
-      if (mouse === "enter") {
-        setImg1(
-          "https://cdn.discordapp.com/attachments/788247984517283880/990860512847872011/gamep2.webp"
-        );
-      } else {
+      if (
+        img1 ===
+        "https://cdn.discordapp.com/attachments/788247984517283880/990860512847872011/gamep2.webp"
+      ) {
         setImg1(
           "https://cdn.discordapp.com/attachments/788247984517283880/990860512600399912/gamep1.webp"
         );
+      } else {
+        setImg1(
+          "https://cdn.discordapp.com/attachments/788247984517283880/990860512847872011/gamep2.webp"
+        );
       }
     } else if (img === 2) {
-      if (mouse === "enter") {
+      if (
+        img2 ===
+        "https://cdn.discordapp.com/attachments/788247984517283880/990860513086951444/promop1.webp"
+      ) {
         setImg2(
           "https://cdn.discordapp.com/attachments/788247984517283880/990860513300852756/promop2.webp"
         );
@@ -37,7 +43,10 @@ const Projects = () => {
         );
       }
     } else if (img === 3) {
-      if (mouse === "enter") {
+      if (
+        img3 ===
+        "https://cdn.discordapp.com/attachments/788247984517283880/990884108550959124/newsp1.webp"
+      ) {
         setImg3(
           "https://cdn.discordapp.com/attachments/788247984517283880/990884108311875654/newsp2.webp"
         );
@@ -95,10 +104,9 @@ const Projects = () => {
               </div>
             </div>
             <img
-              onMouseEnter={() => imgSwitch(1, "enter")}
-              onMouseLeave={() => imgSwitch(1, "leave")}
-              onTouchStart={() => imgSwitch(1, "enter")}
-              onTouchEnd={() => imgSwitch(1, "leave")}
+              onClick={() => imgSwitch(1)}
+              onTouchStart={() => imgSwitch(1)}
+              onTouchEnd={() => imgSwitch(1)}
               alt="project"
               className="project-img"
               height={1080}
@@ -144,10 +152,9 @@ const Projects = () => {
               </div>
             </div>
             <img
-              onMouseEnter={() => imgSwitch(2, "enter")}
-              onMouseLeave={() => imgSwitch(2, "leave")}
-              onTouchStart={() => imgSwitch(2, "enter")}
-              onTouchEnd={() => imgSwitch(2, "leave")}
+              onClick={() => imgSwitch(2)}
+              onTouchStart={() => imgSwitch(2)}
+              onTouchEnd={() => imgSwitch(2)}
               alt="project"
               className="project-img"
               height={1080}
@@ -192,10 +199,9 @@ const Projects = () => {
               </div>
             </div>
             <img
-              onMouseEnter={() => imgSwitch(3, "enter")}
-              onMouseLeave={() => imgSwitch(3, "leave")}
-              onTouchStart={() => imgSwitch(3, "enter")}
-              onTouchEnd={() => imgSwitch(3, "leave")}
+              onClick={() => imgSwitch(3)}
+              onTouchStart={() => imgSwitch(3)}
+              onTouchEnd={() => imgSwitch(3)}
               alt="project"
               className="project-img"
               height={1080}

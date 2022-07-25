@@ -8,7 +8,7 @@ const Hero = () => {
   const aboutMe = (section) => {
     if (section === "pdf") {
       window.open(
-        "https://cdn.discordapp.com/attachments/747928182891610213/998462332642537572/WebDevResume.pdf",
+        "https://cdn.discordapp.com/attachments/747928182891610213/1000965445429506149/Resume-Brandon_Shewnarain_WebDev.pdf",
         "_blank"
       );
     } else {

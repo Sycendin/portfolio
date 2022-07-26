@@ -50,13 +50,17 @@ const Features = () => {
               {/* Go through array and map data */}
               {data.map((element, i) => {
                 return (
-                  <Fragment>
+                  <Fragment key={i}>
                     <div className="feature-div">
                       <div className="feature-info">
                         <p className="feature-title">{element.title}</p>
                         {/* Map string data while making a new line at each #break */}
                         {element.text.split("#break").map((line, i) => {
-                          return <p className="feature-text">{line}</p>;
+                          return (
+                            <p key={i} className="feature-text">
+                              {line}
+                            </p>
+                          );
                         })}
                       </div>
                       <img

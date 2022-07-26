@@ -8,7 +8,7 @@ const Hero = () => {
   const aboutMe = (section) => {
     if (section === "pdf") {
       window.open(
-        "https://cdn.discordapp.com/attachments/747928182891610213/998462332642537572/WebDevResume.pdf",
+        "https://cdn.discordapp.com/attachments/747928182891610213/1000965445429506149/Resume-Brandon_Shewnarain_WebDev.pdf",
         "_blank"
       );
     } else {
@@ -32,14 +32,13 @@ const Hero = () => {
               <Fade duration={4000} triggerOnce>
                 {heroButtonData.map((button, i) => {
                   return (
-                    <Fragment key={i}>
-                      <button
-                        className={`hero-button ${mode}`}
-                        onClick={() => aboutMe(button.link)}
-                      >
-                        {button.title}
-                      </button>
-                    </Fragment>
+                    <button
+                      key={i}
+                      className={`hero-button ${mode}`}
+                      onClick={() => aboutMe(button.link)}
+                    >
+                      {button.title}
+                    </button>
                   );
                 })}
               </Fade>

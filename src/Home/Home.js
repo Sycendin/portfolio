@@ -10,8 +10,9 @@ import { useMode } from "./ModeContext/ModeContext";
 import "./Home.css";
 
 const Home = () => {
-  // console.log(mode);
   const mode = useMode();
+  // Always start at top of the page
+  window.scrollTo(0, 0);
   return (
     <Fragment>
       <div className={`home ${mode}`}>

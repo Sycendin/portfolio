@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "./Features.css";
 import { useMode } from "../ModeContext/ModeContext";
+import { Link } from "react-router-dom";
 import { dataGame, dataPromo, dataNews } from "./FeaturesData/FeaturesData";
 import Darkmode from "../Darkmode/Darkmode";
 import NotFound from "../../NotFound/NotFound";
@@ -76,6 +77,14 @@ const Features = () => {
               })}
             </div>
           </Fragment>
+          {/* Home Button */}
+          <div className="project-button-div">
+            <Link to="/portfolio/home/" style={{ textDecoration: "none" }}>
+              <button style={{ marginBottom: 8 }} className="project-button">
+                Back Home
+              </button>
+            </Link>
+          </div>
         </div>
       </Fragment>
     );

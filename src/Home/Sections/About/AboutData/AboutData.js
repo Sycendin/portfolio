@@ -7,10 +7,9 @@ export const dataAbout = [
   { title: "PWAs" },
   { title: "Redux" },
   { title: "Typescript" },
-  { title: "PERN Apps with Node.js" },
+  { title: "MERN Apps with Node.js" },
   { title: "MYSQL" },
   { title: "Git" },
-  { title: "Python" },
 ];
 
 export const AboutMe = [

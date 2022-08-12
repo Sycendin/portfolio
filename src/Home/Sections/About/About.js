@@ -42,7 +42,7 @@ const About = () => {
                 className="about-button"
                 onClick={() =>
                   window.open(
-                    "https://cdn.discordapp.com/attachments/747928182891610213/1000965445429506149/Resume-Brandon_Shewnarain_WebDev.pdf",
+                    "https://drive.google.com/file/d/1c0UGQy25_GQvqxt8VzsIBNEGJ_ei9wQ1/view?usp=sharing",
                     "_blank"
                   )
                 }

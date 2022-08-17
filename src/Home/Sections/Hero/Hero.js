@@ -8,7 +8,7 @@ const Hero = () => {
   const aboutMe = (section) => {
     if (section === "pdf") {
       window.open(
-        "https://drive.google.com/file/d/1c0UGQy25_GQvqxt8VzsIBNEGJ_ei9wQ1/view?usp=sharing",
+        "https://drive.google.com/file/d/1SBp0isHp4PBGVXHY2qn1VVMpw5RCnb0K/view?usp=sharing",
         "_blank"
       );
     } else {

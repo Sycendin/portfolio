@@ -29,6 +29,18 @@ export const dataGame = [
     image:
       "https://cdn.discordapp.com/attachments/747928182891610213/997053316896923708/mobile.webp",
   },
+  {
+    title: "Heroku Node.js Server and MySQL DB",
+    text: "Makes an API request to a Heroku hosted server which then makes a request to the attached database.  #break This is used on the home page to get the text for the onboards and to check if an url is valid for the archetype display.",
+    image:
+      "https://cdn.discordapp.com/attachments/747928182891610213/1009653511581093888/database.webp",
+  },
+  {
+    title: "Markdown",
+    text: "Uses markdown files to display the text for the onboards. #break The links are stored in the MySQL database. #break The Heroku server accesses this info when the appropriate API request is made from the front-end.",
+    image:
+      "https://cdn.discordapp.com/attachments/747928182891610213/1009653511224561684/markdown.webp",
+  },
 ];
 
 export const dataPromo = [

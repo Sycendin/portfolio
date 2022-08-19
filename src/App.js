@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { ModeProvider } from "./Home/ModeContext/ModeContext";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+
 import NotFound from "./NotFound/NotFound";
 import Home from "./Home/Home";
 import Features from "./Home/Features/Features";

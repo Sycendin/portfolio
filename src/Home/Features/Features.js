@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import "./Features.css";
 import { useMode } from "../ModeContext/ModeContext";
 import { Link } from "react-router-dom";
@@ -7,11 +8,14 @@ import Darkmode from "../Darkmode/Darkmode";
 import NotFound from "../../NotFound/NotFound";
 
 const Features = () => {
+  const [featureData, setFeatureData] = useState([]);
+  const [imageData, setImageData] = useState([]);
   // USe darkmode
   const mode = useMode();
   // Get current url
   const currentUrl = window.location.href.split("/");
   const currentUrlEnd = currentUrl[currentUrl.length - 2];
+  let feature = [];
   let data = "";
   let title = "";
   let urlValid = true;
@@ -19,28 +23,56 @@ const Features = () => {
   if (currentUrlEnd === "game") {
     data = dataGame;
     title = "Yu-Gi-Oh! Guessing Game";
+    feature = ["feature1", "images1"];
   } else if (currentUrlEnd === "promo") {
     data = dataPromo;
     title = "Toronto Blue Jays Promo Page";
+    feature = ["feature2", "images2"];
   } else if (currentUrlEnd === "news") {
     data = dataNews;
     title = "Mock News Site";
+    feature = ["feature3", "images3"];
   } else {
     urlValid = false;
   }
   // Always start at top of the page
   window.scrollTo(0, 0);
+
+  useEffect(() => {
+    const getData = async () => {
+      for (let i = 0; i < 2; i++) {
+        const content = await fetch(
+          `http://localhost:3002/multimarkdown/${feature[i]}`,
+          {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await content.json();
+        if (i === 0) {
+          setFeatureData(data);
+        } else {
+          setImageData(data);
+        }
+      }
+    };
+    getData();
+  }, []);
   if (urlValid !== true) {
     return (
       <Fragment>
         <NotFound />
       </Fragment>
     );
-  } else {
+  } else if (featureData.length > 1) {
     return (
       <Fragment>
         <div className={`home ${mode}`}>
           <Darkmode />
+          <ReactMarkdown className="mark-test" children={featureData[0]} />
           <Fragment>
             <div>
               <p className={`projects-section-title ${mode}`}>

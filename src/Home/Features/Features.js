@@ -21,15 +21,12 @@ const Features = () => {
   let urlValid = true;
   // Set data based on URL and check if URL is valid
   if (currentUrlEnd === "game") {
-    data = dataGame;
     title = "Yu-Gi-Oh! Guessing Game";
     feature = ["feature1", "images1"];
   } else if (currentUrlEnd === "promo") {
-    data = dataPromo;
     title = "Toronto Blue Jays Promo Page";
     feature = ["feature2", "images2"];
   } else if (currentUrlEnd === "news") {
-    data = dataNews;
     title = "Mock News Site";
     feature = ["feature3", "images3"];
   } else {
@@ -42,7 +39,7 @@ const Features = () => {
     const getData = async () => {
       for (let i = 0; i < 2; i++) {
         const content = await fetch(
-          `http://localhost:3002/multimarkdown/${feature[i]}`,
+          `https://yu-game.herokuapp.com/multimarkdown/${feature[i]}`,
           {
             method: "GET",
             headers: {
@@ -72,7 +69,7 @@ const Features = () => {
       <Fragment>
         <div className={`home ${mode}`}>
           <Darkmode />
-          <ReactMarkdown className="mark-test" children={featureData[0]} />
+
           <Fragment>
             <div>
               <p className={`projects-section-title ${mode}`}>
@@ -81,28 +78,25 @@ const Features = () => {
             </div>
             <div className="features-div">
               {/* Go through array and map data */}
-              {data.map((element, i) => {
+              {data.map((i) => {
                 return (
                   <Fragment key={i}>
                     <div className="feature-div">
                       <div className="feature-info">
-                        <p className="feature-title">{element.title}</p>
-                        {/* Map string data while making a new line at each #break */}
-                        {element.text.split("#break").map((line, i) => {
-                          return (
-                            <p key={i} className="feature-text">
-                              {line}
-                            </p>
-                          );
-                        })}
+                        <ReactMarkdown
+                          className="mark-test"
+                          children={featureData[i]}
+                        />
                       </div>
-                      <img
-                        alt="feature"
-                        className="feature-img"
-                        height={512}
-                        width={512}
-                        src={element.image}
-                      />
+                      {imageData.length > 1 ? (
+                        <img
+                          alt="feature"
+                          className="feature-img"
+                          height={512}
+                          width={512}
+                          src={imageData[i]}
+                        />
+                      ) : null}
                     </div>
                   </Fragment>
                 );

@@ -3,7 +3,6 @@ import ReactMarkdown from "react-markdown";
 import "./Features.css";
 import { useMode } from "../ModeContext/ModeContext";
 import { Link } from "react-router-dom";
-import { dataGame, dataPromo, dataNews } from "./FeaturesData/FeaturesData";
 import Darkmode from "../Darkmode/Darkmode";
 import NotFound from "../../NotFound/NotFound";
 
@@ -16,9 +15,9 @@ const Features = () => {
   const currentUrl = window.location.href.split("/");
   const currentUrlEnd = currentUrl[currentUrl.length - 2];
   let feature = [];
-  let data = "";
   let title = "";
   let urlValid = true;
+  let x = -1;
   // Set data based on URL and check if URL is valid
   if (currentUrlEnd === "game") {
     title = "Yu-Gi-Oh! Guessing Game";
@@ -78,14 +77,17 @@ const Features = () => {
             </div>
             <div className="features-div">
               {/* Go through array and map data */}
-              {data.map((i) => {
+              {featureData.map((i) => {
+                console.log(i);
+                x = x + 1;
+                console.log(x);
                 return (
                   <Fragment key={i}>
                     <div className="feature-div">
                       <div className="feature-info">
                         <ReactMarkdown
                           className="mark-test"
-                          children={featureData[i]}
+                          children={featureData[x]}
                         />
                       </div>
                       {imageData.length > 1 ? (
@@ -94,7 +96,7 @@ const Features = () => {
                           className="feature-img"
                           height={512}
                           width={512}
-                          src={imageData[i]}
+                          src={imageData[x]}
                         />
                       ) : null}
                     </div>

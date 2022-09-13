@@ -65,56 +65,50 @@ const Features = () => {
     );
   } else if (featureData.length > 1) {
     return (
-      <Fragment>
-        <div className={`home ${mode}`}>
-          <Darkmode />
+      <div className={`home ${mode}`}>
+        <Darkmode />
 
-          <Fragment>
-            <div>
-              <p className={`projects-section-title ${mode}`}>
-                {title} Features
-              </p>
-            </div>
-            <div className="features-div">
-              {/* Go through array and map data */}
-              {featureData.map((i) => {
-                console.log(i);
-                x = x + 1;
-                console.log(x);
-                return (
-                  <Fragment key={i}>
-                    <div className="feature-div">
-                      <div className="feature-info">
-                        <ReactMarkdown
-                          className="mark-test"
-                          children={featureData[x]}
-                        />
-                      </div>
-                      {imageData.length > 1 ? (
-                        <img
-                          alt="feature"
-                          className="feature-img"
-                          height={512}
-                          width={512}
-                          src={imageData[x]}
-                        />
-                      ) : null}
-                    </div>
-                  </Fragment>
-                );
-              })}
-            </div>
-          </Fragment>
-          {/* Home Button */}
-          <div className="project-button-div">
-            <Link to="/portfolio/home/" style={{ textDecoration: "none" }}>
-              <button style={{ marginBottom: 8 }} className="project-button">
-                Back Home
-              </button>
-            </Link>
+        <Fragment>
+          <div>
+            <p className={`projects-section-title ${mode}`}>{title} Features</p>
           </div>
+          <div className="features-div">
+            {/* Go through array and map data */}
+            {featureData.map((i) => {
+              x = x + 1;
+              return (
+                <Fragment key={i}>
+                  <div className="feature-div">
+                    <div className="feature-info">
+                      <ReactMarkdown
+                        className="mark-test"
+                        children={featureData[x]}
+                      />
+                    </div>
+                    {imageData.length > 1 ? (
+                      <img
+                        alt="feature"
+                        className="feature-img"
+                        height={512}
+                        width={512}
+                        src={imageData[x]}
+                      />
+                    ) : null}
+                  </div>
+                </Fragment>
+              );
+            })}
+          </div>
+        </Fragment>
+        {/* Home Button */}
+        <div className="project-button-div">
+          <Link to="/portfolio/home/" style={{ textDecoration: "none" }}>
+            <button style={{ marginBottom: 8 }} className="project-button">
+              Back Home
+            </button>
+          </Link>
         </div>
-      </Fragment>
+      </div>
     );
   }
 };

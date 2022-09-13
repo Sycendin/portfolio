@@ -35,7 +35,10 @@ function App() {
               path="/portfolio/home/:id/"
               element={
                 <Fragment>
-                  <Features /> <Footer />
+                  <div className="min-height">
+                    <Features />
+                  </div>
+                  <Footer />
                 </Fragment>
               }
             />

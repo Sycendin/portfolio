@@ -17,7 +17,6 @@ const Features = () => {
   let feature = [];
   let title = "";
   let urlValid = true;
-  let x = -1;
   // Set data based on URL and check if URL is valid
   if (currentUrlEnd === "game") {
     title = "Yu-Gi-Oh! Guessing Game";
@@ -56,7 +55,7 @@ const Features = () => {
       }
     };
     getData();
-  }, []);
+  }, [feature]);
   if (urlValid !== true) {
     return (
       <Fragment>
@@ -74,15 +73,14 @@ const Features = () => {
           </div>
           <div className="features-div">
             {/* Go through array and map data */}
-            {featureData.map((i) => {
-              x = x + 1;
+            {featureData.map((i, index) => {
               return (
                 <Fragment key={i}>
                   <div className="feature-div">
                     <div className="feature-info">
                       <ReactMarkdown
                         className="mark-test"
-                        children={featureData[x]}
+                        children={featureData[index]}
                       />
                     </div>
                     {imageData.length > 1 ? (
@@ -91,7 +89,7 @@ const Features = () => {
                         className="feature-img"
                         height={512}
                         width={512}
-                        src={imageData[x]}
+                        src={imageData[index]}
                       />
                     ) : null}
                   </div>

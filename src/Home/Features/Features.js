@@ -35,6 +35,7 @@ const Features = () => {
 
   useEffect(() => {
     const getData = async () => {
+      // Make 2 fetches to server, one for text data and one for image data
       for (let i = 0; i < 2; i++) {
         const content = await fetch(
           `https://yu-game.herokuapp.com/multimarkdown/${feature[i]}`,
@@ -47,6 +48,7 @@ const Features = () => {
           }
         );
         const data = await content.json();
+        // Set text data and image data as states
         if (i === 0) {
           setFeatureData(data);
         } else {
@@ -55,7 +57,7 @@ const Features = () => {
       }
     };
     getData();
-  }, [feature]);
+  }, []);
   if (urlValid !== true) {
     return (
       <Fragment>

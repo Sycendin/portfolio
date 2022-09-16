@@ -4,6 +4,7 @@ import "./Features.css";
 import { useMode } from "../ModeContext/ModeContext";
 import { Link } from "react-router-dom";
 import Darkmode from "../Darkmode/Darkmode";
+import FeaturesLoad from "./FeaturesLoad/FeaturesLoad";
 import NotFound from "../../NotFound/NotFound";
 
 const Features = () => {
@@ -64,6 +65,10 @@ const Features = () => {
         <NotFound />
       </Fragment>
     );
+  }
+  // Put loading divs when loading data
+  else if (featureData.length < 1) {
+    return <FeaturesLoad />;
   } else if (featureData.length > 1) {
     return (
       <div className={`home ${mode}`}>

@@ -67,9 +67,9 @@ const Features = () => {
     );
   }
   // Put loading divs when loading data
-  else if (featureData.length < 1) {
+  else if (featureData.length > 1) {
     return <FeaturesLoad />;
-  } else if (featureData.length > 1) {
+  } else if (featureData.length < 1) {
     return (
       <div className={`home ${mode}`}>
         <Darkmode />

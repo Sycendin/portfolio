@@ -1,0 +1,51 @@
+.fmargin{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.fbg{
+	background: linear-gradient(-90deg, rgb(212, 212, 212), rgb(153, 153, 153), rgb(212, 212, 212)) ;
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+}
+.f-wholediv{
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fload-p{
+  width: 40%;
+  height: 100px;
+  background-color: rgb(212, 212, 212);
+
+}
+.fload-div{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 200px;
+
+}
+.fbutton-div{
+  width: 8%;
+  height: 40px;
+  background-color: rgb(212, 212, 212);
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

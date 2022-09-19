@@ -19,7 +19,7 @@
   margin-right: auto;
 }
 .fload-p{
-  width: 40%;
+  width: 70%;
   height: 100px;
   background-color: rgb(212, 212, 212);
 
@@ -27,12 +27,12 @@
 .fload-div{
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 90%;
   height: 200px;
 
 }
 .fbutton-div{
-  width: 8%;
+  width: 15%;
   height: 40px;
   background-color: rgb(212, 212, 212);
 
@@ -48,4 +48,18 @@
 	100% {
 		background-position: 0% 50%;
 	}
+}
+@media  (max-width: 870px) {
+.f-wholediv{
+  width: 80%;
+}
+
+}
+@media  (max-width: 600px) {
+  .f-wholediv{
+    width: 100%;
+  }
+ .fbutton-div{
+  width: 30%;
+ }
 }

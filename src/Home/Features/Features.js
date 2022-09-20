@@ -4,7 +4,7 @@ import "./Features.css";
 import { useMode } from "../ModeContext/ModeContext";
 import { Link } from "react-router-dom";
 import Darkmode from "../Darkmode/Darkmode";
-import FeaturesLoad from "./FeaturesLoad/FeaturesLoad";
+import FeaturesLoad from "./Load/FeaturesLoad/FeaturesLoad";
 import NotFound from "../../NotFound/NotFound";
 
 const Features = () => {

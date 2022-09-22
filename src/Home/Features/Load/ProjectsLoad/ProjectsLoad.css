@@ -20,16 +20,20 @@
 }
 
 .pload-div{
-
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 .pload-innerleft{
-
+  width: 50%;
 }
-.pload-inneright
+.pload-inneright{
+  width: 50%;
+}
 .pload-p{
-
+ color: beige;
 }
 
 .pload-button{
-
+  width: 2%;
 }

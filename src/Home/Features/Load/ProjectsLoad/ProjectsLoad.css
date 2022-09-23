@@ -30,10 +30,11 @@
 .pload-inneright{
   width: 50%;
 }
-.pload-p{
+/* .pload-p{
  color: beige;
-}
+} */
 
 .pload-button{
-  width: 2%;
+  width: 3%;
+  color: rgb(167, 167, 167);
 }

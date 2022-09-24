@@ -23,6 +23,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+  color: rgb(207, 207, 207);
 }
 .pload-innerleft{
   width: 50%;
@@ -30,9 +31,6 @@
 .pload-inneright{
   width: 50%;
 }
-/* .pload-p{
- color: beige;
-} */
 
 .pload-button{
   width: 3%;

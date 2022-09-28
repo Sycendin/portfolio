@@ -10,6 +10,11 @@
 	background-size: 400% 400%;
 	animation: gradient 3s ease infinite;
 }
+.fbgd{
+	background: linear-gradient(-90deg, rgb(182, 182, 182), rgb(103, 103, 103), rgb(182, 182, 182)) ;
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+}
 .pload-wholediv{
   display: flex;
   flex-direction: column;
@@ -23,16 +28,66 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  color: rgb(207, 207, 207);
+  width: 90%;
+  height: 200px;
+  border-radius: 10px;
+
+}
+.left-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.pload-text{
+  width: 80%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.pload-button-div{
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
 }
 .pload-innerleft{
+  display: flex;
+  justify-content: left;
   width: 50%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-.pload-inneright{
+.pload-innerright{
+  display: flex;
+  justify-content: right;
   width: 50%;
-}
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+} 
 
 .pload-button{
-  width: 3%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 30%;
+  height: 30px;
+  border-radius: 10px;
   color: rgb(167, 167, 167);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

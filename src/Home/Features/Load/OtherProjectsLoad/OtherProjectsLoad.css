@@ -1,0 +1,43 @@
+.oproject-wholediv{
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.oproject-divl{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+ background-color:bisque;
+ border-radius: 10px;
+}
+
+.oproject-div{
+  display: flex;
+ width: calc(50% - 10px);
+ margin-left: 5px;
+ margin-right: 5px;
+ height: 100px;
+ background-color: aquamarine;
+ border-radius: 10px;
+}
+
+.oproject-divinnerl{
+  width: 90%;
+  height: 100px;
+}
+
+.oproject-text{
+
+}
+
+
+.oproject-divinnerr{
+
+}

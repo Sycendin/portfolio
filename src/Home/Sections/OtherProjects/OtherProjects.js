@@ -1,10 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react";
 import OtherProjectsM from "./OtherProjectsMobile/OtherProjectsM";
+import OtherProjectsLoad from "../../Features/Load/OtherProjectsLoad/OtherProjectsLoad";
 import { Fade } from "react-awesome-reveal";
 import "./OtherProjects.css";
 
 const OtherProjects = () => {
   const [width, setWidth] = useState(window.innerWidth);
+  const [odata, setOData] = useState("Test");
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -21,6 +23,15 @@ const OtherProjects = () => {
     return (
       <Fragment>
         <OtherProjectsM />
+      </Fragment>
+    );
+  } else if (odata === "Test") {
+    return (
+      <Fragment>
+        <div id="other-projects" className="other-projects-title">
+          <p className="other-title">Other Projects</p>
+        </div>
+        <OtherProjectsLoad />
       </Fragment>
     );
   } else {

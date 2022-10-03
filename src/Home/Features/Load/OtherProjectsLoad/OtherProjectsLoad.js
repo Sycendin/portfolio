@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import OtherProjectsBox from "./OtherProjectsBox/OtherProjectsBox";
 import "./OtherProjectsLoad.css";
 const OtherProjectsLoad = () => {
   return (

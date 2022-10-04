@@ -22,6 +22,14 @@
 	background-size: 400% 400%;
 	animation: gradient 3s ease infinite;
 }
+.fbg-left{
+	background: linear-gradient(-90deg, rgb(212, 212, 212), rgb(153, 153, 153), rgb(212, 212, 212)) ;
+	background-size: 400% 400%;
+	border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  animation: gradient 3s ease infinite;
+  
+}
 
 .fbgd{
 	background: linear-gradient(-90deg, rgb(182, 182, 182), rgb(103, 103, 103), rgb(182, 182, 182)) ;

@@ -5,16 +5,7 @@
   margin-right: auto;
   border-radius: 10px;
 }
-.fbg{
-	background: linear-gradient(-90deg, rgb(212, 212, 212), rgb(153, 153, 153), rgb(212, 212, 212)) ;
-	background-size: 400% 400%;
-	animation: gradient 3s ease infinite;
-}
-.fbgd{
-	background: linear-gradient(-90deg, rgb(182, 182, 182), rgb(103, 103, 103), rgb(182, 182, 182)) ;
-	background-size: 400% 400%;
-	animation: gradient 3s ease infinite;
-}
+
 .pload-wholediv{
   display: flex;
   flex-direction: column;
@@ -80,14 +71,23 @@
   color: rgb(167, 167, 167);
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+@media  (max-width: 1139px) {
+  .pload-wholediv{
+    width: 80%;
+  }
+
+
+}
+
+@media  (max-width: 870px) {
+  .pload-wholediv{
+    display: flex;
+    width: 80%;
+  }
+
+
+}
+@media  (max-width: 600px) {
+
+
 }

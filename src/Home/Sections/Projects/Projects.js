@@ -60,7 +60,14 @@ const Projects = () => {
     }
   };
   if (projectLoad === "Test") {
-    return <ProjectsLoad />;
+    return (
+      <Fragment>
+        <div>
+          <p className={`projects-section-title ${mode}`}>Projects</p>
+        </div>
+        <ProjectsLoad />
+      </Fragment>
+    );
   } else {
     return (
       <Fragment>

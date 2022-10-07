@@ -110,6 +110,8 @@
 
 }
 @media  (max-width: 600px) {
-
-
+  .oproject-wholediv{
+    display: flex;
+    width: 100%;
+  }
 }

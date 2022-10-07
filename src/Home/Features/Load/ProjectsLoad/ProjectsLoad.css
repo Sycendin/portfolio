@@ -73,6 +73,7 @@
 
 @media  (max-width: 1139px) {
   .pload-wholediv{
+    display: flex;
     width: 80%;
   }
 
@@ -89,5 +90,9 @@
 }
 @media  (max-width: 600px) {
 
+  .pload-wholediv{
+    display: flex;
+    width: 100%;
+  }
 
 }

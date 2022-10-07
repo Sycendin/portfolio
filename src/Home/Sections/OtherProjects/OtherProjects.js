@@ -19,7 +19,18 @@ const OtherProjects = () => {
   }, []);
 
   // If width is small enough, render condensed other projects
-  if (width <= 870) {
+  if (width <= 870 && odata === "Test") {
+    return (
+      <Fragment>
+        <Fade duration={2000} triggerOnce>
+          <div id="other-projects" className="other-projects-title">
+            <p className="other-title">Other Projects</p>
+          </div>
+        </Fade>
+        <OtherProjectsLoad />
+      </Fragment>
+    );
+  } else if (width <= 870) {
     return (
       <Fragment>
         <OtherProjectsM />

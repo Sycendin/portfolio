@@ -5,7 +5,7 @@ import "./ProjectsLoad.css";
 const ProjectsLoad = () => {
   return (
     <Fragment>
-      <div className="f-wholediv">
+      <div className="pload-wholediv">
         <ProjectsLoadBox />
         <ProjectsLoadBox />
         <ProjectsLoadBox />

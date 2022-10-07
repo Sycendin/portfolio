@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { FeatureLoadBox } from "./FeatureLoadBox/FeatureLoadBox";
 import "./FeaturesLoad.css";
 const FeaturesLoad = () => {
   return (
@@ -6,9 +7,10 @@ const FeaturesLoad = () => {
       <div className="f-wholediv">
         <div className="fload-p fmargin fbg"></div>
         {/* return the same div 4 times */}
-        {[1, 2, 3, 4].map((element) => {
-          return <div key={element} className="fload-div fmargin fbg"></div>;
-        })}
+        <FeatureLoadBox />
+        <FeatureLoadBox />
+        <FeatureLoadBox />
+        <FeatureLoadBox />
         <div className="fbutton-div fmargin fbg"></div>
       </div>
     </Fragment>

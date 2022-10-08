@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useMode } from "../../ModeContext/ModeContext";
 import { Slide } from "react-awesome-reveal";
 import EachProject from "./EachProjects/EachProject";
@@ -15,6 +15,9 @@ const Projects = () => {
     "https://cdn.discordapp.com/attachments/788247984517283880/990884108550959124/newsp1.webp"
   );
   const [projectLoad, setProjectLoad] = useState("Test");
+  const [projectImage, setProjectImage] = useState([]);
+  const [projectLinks, setProjectLinks] = useState([]);
+  const projectinfo = ["projects", "projectimages", "projectlinks"];
   const mode = useMode();
   // Switch between images depending on mouse enter/leave
   const imgSwitch = (img) => {
@@ -59,6 +62,33 @@ const Projects = () => {
       }
     }
   };
+  useEffect(() => {
+    const getPData = async () => {
+      // Make 2 fetches to server, one for text data and one for image data
+      for (let i = 0; i < 1; i++) {
+        const content = await fetch(
+          `https://yu-game.herokuapp.com/multimarkdown/${projectinfo[i]}`,
+          {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await content.json();
+        // Set text data and image data as states
+        if (i === 0) {
+          setProjectLoad(data);
+        } else if (i == 1) {
+          setProjectImage(data);
+        } else if (i == 2) {
+          setProjectLinks(data);
+        }
+      }
+    };
+    getPData();
+  }, []);
   if (projectLoad === "Test") {
     return (
       <Fragment>

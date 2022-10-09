@@ -65,7 +65,7 @@ const Projects = () => {
   useEffect(() => {
     const getPData = async () => {
       // Make 2 fetches to server, one for text data and one for image data
-      for (let i = 0; i < 1; i++) {
+      for (let i = 0; i < 3; i++) {
         const content = await fetch(
           `https://yu-game.herokuapp.com/multimarkdown/${projectinfo[i]}`,
           {
@@ -80,9 +80,9 @@ const Projects = () => {
         // Set text data and image data as states
         if (i === 0) {
           setProjectLoad(data);
-        } else if (i == 1) {
+        } else if (i === 1) {
           setProjectImage(data);
-        } else if (i == 2) {
+        } else if (i === 2) {
           setProjectLinks(data);
         }
       }
@@ -107,15 +107,36 @@ const Projects = () => {
           </div>
           {/* First Project */}
           <Slide triggerOnce delay={250}>
-            <EachProject position={0} img={img1} imgSwitch={imgSwitch} />
+            <EachProject
+              data={projectLoad[0]}
+              image={projectImage[0]}
+              links={projectLinks[0]}
+              position={0}
+              img={img1}
+              imgSwitch={imgSwitch}
+            />
           </Slide>
           {/* Second Project */}
           <Slide triggerOnce delay={250}>
-            <EachProject position={1} img={img2} imgSwitch={imgSwitch} />
+            <EachProject
+              data={projectLoad[1]}
+              image={projectImage[1]}
+              links={projectLinks[1]}
+              position={1}
+              img={img2}
+              imgSwitch={imgSwitch}
+            />
           </Slide>
           {/* Third Project */}
           <Slide triggerOnce delay={250}>
-            <EachProject position={2} img={img3} imgSwitch={imgSwitch} />
+            <EachProject
+              data={projectLoad[2]}
+              image={projectImage[2]}
+              links={projectLinks[2]}
+              position={2}
+              img={img3}
+              imgSwitch={imgSwitch}
+            />
           </Slide>
           <br />
         </div>

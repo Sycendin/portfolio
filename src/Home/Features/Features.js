@@ -59,6 +59,7 @@ const Features = () => {
     };
     getData();
   }, []);
+
   if (urlValid !== true) {
     return (
       <Fragment>
@@ -66,10 +67,11 @@ const Features = () => {
       </Fragment>
     );
   }
+
   // Put loading divs when loading data
-  else if (featureData.length > 1) {
+  else if (featureData.length < 1) {
     return <FeaturesLoad />;
-  } else if (featureData.length < 1) {
+  } else if (featureData.length >= 1) {
     return (
       <div className={`home ${mode}`}>
         <Darkmode />

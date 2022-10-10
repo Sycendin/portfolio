@@ -7,6 +7,13 @@ import "./OtherProjects.css";
 const OtherProjects = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [odata, setOData] = useState("Test");
+  const [oimage, setOImage] = useState("Test");
+  const [olinks, setOLinks] = useState("Test");
+  const otherprojectinfo = [
+    "otherprojects",
+    "otherprojectimages",
+    "otherprojectlinks",
+  ];
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -14,6 +21,32 @@ const OtherProjects = () => {
     window.addEventListener("resize", handleResize);
     // Call handler right away so state gets updated with initial window size
     handleResize();
+
+    const getOData = async () => {
+      // Make 2 fetches to server, one for text data and one for image data
+      for (let i = 0; i < 3; i++) {
+        const content = await fetch(
+          `https://yu-game.herokuapp.com/multimarkdown/${otherprojectinfo[i]}`,
+          {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await content.json();
+        // Set text data and image data as states
+        if (i === 0) {
+          setOData(data);
+        } else if (i === 1) {
+          setOImage(data);
+        } else if (i === 2) {
+          setOLinks(data);
+        }
+      }
+    };
+    // getOData();
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);

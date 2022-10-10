@@ -89,7 +89,7 @@ const Projects = () => {
     };
     getPData();
   }, []);
-  if (projectLoad === "Test") {
+  if (projectLoad.length === 0) {
     return (
       <Fragment>
         <div>

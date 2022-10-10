@@ -4,17 +4,12 @@ import { projectData } from "../ProjectData/ProjectData";
 import { Link } from "react-router-dom";
 const EachProject = ({ position, imgSwitch, img, data, image, links }) => {
   let slink = [];
-  let x = "";
+  let endlink = "";
   if (links !== undefined) {
-    // console.log(projectData[position].links[2]);
     slink = links.split(" ");
-    console.log(slink[2].toString());
-    x = slink[2].split("/");
-    console.log(x);
+    endlink = slink[2].split("/");
   }
-  // let slinks = links.split(" ");
-  // console.log(links.split(" "));
-  // console.log(slinks[0]);
+
   if (links !== undefined) {
     return (
       <Fragment>
@@ -35,7 +30,7 @@ const EachProject = ({ position, imgSwitch, img, data, image, links }) => {
               >
                 Source Code
               </button>
-              <Link to={`${x[3]}/`} style={{ textDecoration: "none" }}>
+              <Link to={`${endlink[3]}/`} style={{ textDecoration: "none" }}>
                 <button className="project-button">Features</button>
               </Link>
             </div>

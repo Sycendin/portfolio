@@ -1,19 +1,19 @@
 import React, { Fragment, useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import OtherProjectsM from "./OtherProjectsMobile/OtherProjectsM";
 import OtherProjectsLoad from "../../Features/Load/OtherProjectsLoad/OtherProjectsLoad";
 import { Fade } from "react-awesome-reveal";
 import "./OtherProjects.css";
 
 const OtherProjects = () => {
+  let links,
+    links2,
+    links3 = [];
   const [width, setWidth] = useState(window.innerWidth);
   const [odata, setOData] = useState("Test");
-  const [oimage, setOImage] = useState("Test");
-  const [olinks, setOLinks] = useState("Test");
-  const otherprojectinfo = [
-    "otherprojects",
-    "otherprojectimages",
-    "otherprojectlinks",
-  ];
+  const [oimage, setOImage] = useState([]);
+  const [olinks, setOLinks] = useState([]);
+  const otherprojectinfo = ["oprojects", "oprojectimages", "oprojectlinks"];
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -46,11 +46,17 @@ const OtherProjects = () => {
         }
       }
     };
-    // getOData();
+    getOData();
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  if (olinks.length > 0) {
+    console.log(olinks[0].split(" "));
+    links = olinks[0].split(" ");
+    links2 = olinks[1].split(" ");
+    links3 = olinks[2].split(" ");
+    // console.log(olinks.split(" "));
+  }
   // If width is small enough, render condensed other projects
   if (width <= 870 && odata === "Test") {
     return (
@@ -89,28 +95,17 @@ const OtherProjects = () => {
         <div className="other-div">
           <div className="other-projects">
             <div className="other-info">
-              <p className="other-title">Mike Trout Gallery</p>
-              <p className="other-text">
-                A gallery that showcases some of the Mike Trout drawings drawn
-                during the baseball lockout.
-              </p>
+              <ReactMarkdown className="mark-test" children={odata[0]} />
               <div className="other-project-button-div">
                 <button
                   className="other-project-button"
-                  onClick={() =>
-                    window.open("https://sycendin.github.io/gallery/", "_blank")
-                  }
+                  onClick={() => window.open(links[0], "_blank")}
                 >
                   See Live
                 </button>
                 <button
                   className="other-project-button"
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/Sycendin/gallery/",
-                      "_blank"
-                    )
-                  }
+                  onClick={() => window.open(links[1], "_blank")}
                 >
                   Source Code
                 </button>
@@ -128,35 +123,18 @@ const OtherProjects = () => {
           </div>
           <div className="other-projects">
             <div className="other-info">
-              <p className="other-title">Secret Message</p>
-              <p className="other-text">
-                A Full-Stack app using Redux that lets you log in. <br /> Lets
-                you store a secret message on a redis server and then it gives
-                you a code which another user can use to decrypt your secret
-                message <br /> Uses sessions and allows you to customize your
-                profile
-              </p>
+              <ReactMarkdown className="mark-test" children={odata[1]} />
               <div className="other-project-button-div">
                 <button
                   disabled
                   className="other-project-button-grey"
-                  onClick={() =>
-                    window.open(
-                      "https://sycendin.github.io/reduxlogin",
-                      "_blank"
-                    )
-                  }
+                  onClick={() => window.open(links3[0], "_blank")}
                 >
                   See Live
                 </button>
                 <button
                   className="other-project-button"
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/Sycendin/reduxlogin",
-                      "_blank"
-                    )
-                  }
+                  onClick={() => window.open(links2[1], "_blank")}
                 >
                   Source Code
                 </button>
@@ -174,25 +152,17 @@ const OtherProjects = () => {
           </div>
           <div className="other-projects">
             <div className="other-info">
-              <p className="other-title">Pong Game </p>
-              <p className="other-text">
-                A Pong game played against a computer <br /> You can customize
-                the difficulty and your pong paddle.
-              </p>
+              <ReactMarkdown className="mark-test" children={odata[2]} />
               <div className="other-project-button-div">
                 <button
                   className="other-project-button"
-                  onClick={() =>
-                    window.open("https://sycendin.github.io/pong", "_blank")
-                  }
+                  onClick={() => window.open(links3[0], "_blank")}
                 >
                   See Live
                 </button>
                 <button
                   className="other-project-button"
-                  onClick={() =>
-                    window.open("https://github.com/Sycendin/pong", "_blank")
-                  }
+                  onClick={() => window.open(links3[1], "_blank")}
                 >
                   Source Code
                 </button>

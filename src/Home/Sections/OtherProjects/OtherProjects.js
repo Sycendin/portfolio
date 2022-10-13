@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import OtherProjectsM from "./OtherProjectsMobile/OtherProjectsM";
 import OtherProjectsLoad from "../../Features/Load/OtherProjectsLoad/OtherProjectsLoad";
+import { OtherProjectsPDiv } from "./OtherProjectsPDiv/OtherProjectsPDiv";
 import { Fade } from "react-awesome-reveal";
 import "./OtherProjects.css";
 
@@ -84,7 +85,7 @@ const OtherProjects = () => {
         <OtherProjectsLoad />
       </Fragment>
     );
-  } else {
+  } else if (odata.length > 0 && olinks.length > 0) {
     return (
       <Fragment>
         <Fade duration={2000} triggerOnce>
@@ -93,7 +94,17 @@ const OtherProjects = () => {
           </div>
         </Fade>
         <div className="other-div">
-          <div className="other-projects">
+          {odata.map((element, index, arr) => {
+            return (
+              <OtherProjectsPDiv
+                odata={odata[index]}
+                olinks={olinks[index].split(" ")}
+                oimage={oimage[index]}
+              />
+            );
+          })}
+          {/* <OtherProjectsPDiv odata={odata} olinks={olinks} oimage={oimage}/> */}
+          {/* <div className="other-projects">
             <div className="other-info">
               <ReactMarkdown className="mark-test" children={odata[0]} />
               <div className="other-project-button-div">
@@ -177,7 +188,7 @@ const OtherProjects = () => {
                 src="https://cdn.discordapp.com/attachments/788247984517283880/991961353822675015/pong.webp"
               ></img>
             </div>
-          </div>
+          </div> */}
         </div>
       </Fragment>
     );

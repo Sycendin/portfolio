@@ -2,14 +2,12 @@ import React, { Fragment, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import OtherProjectsM from "./OtherProjectsMobile/OtherProjectsM";
 import OtherProjectsLoad from "../../Features/Load/OtherProjectsLoad/OtherProjectsLoad";
+import { OtherProjectsTitle } from "./OtherProjectsTitle/OtherProjectsTitle";
 import { OtherProjectsPDiv } from "./OtherProjectsPDiv/OtherProjectsPDiv";
-import { Fade } from "react-awesome-reveal";
+// import { Fade } from "react-awesome-reveal";
 import "./OtherProjects.css";
 
 const OtherProjects = () => {
-  let links,
-    links2,
-    links3 = [];
   const [width, setWidth] = useState(window.innerWidth);
   const [odata, setOData] = useState("Test");
   const [oimage, setOImage] = useState([]);
@@ -51,22 +49,10 @@ const OtherProjects = () => {
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  if (olinks.length > 0) {
-    console.log(olinks[0].split(" "));
-    links = olinks[0].split(" ");
-    links2 = olinks[1].split(" ");
-    links3 = olinks[2].split(" ");
-    // console.log(olinks.split(" "));
-  }
   // If width is small enough, render condensed other projects
-  if (width <= 870 && odata === "Test") {
+  if (width <= 870 && odata.length < 1 && olinks.length < 1) {
     return (
       <Fragment>
-        <Fade duration={2000} triggerOnce>
-          <div id="other-projects" className="other-projects-title">
-            <p className="other-title">Other Projects</p>
-          </div>
-        </Fade>
         <OtherProjectsLoad />
       </Fragment>
     );
@@ -76,119 +62,27 @@ const OtherProjects = () => {
         <OtherProjectsM />
       </Fragment>
     );
-  } else if (odata === "Test") {
+  } else if (odata.length < 1 && olinks.length < 1) {
     return (
       <Fragment>
-        <div id="other-projects" className="other-projects-title">
-          <p className="other-title">Other Projects</p>
-        </div>
         <OtherProjectsLoad />
       </Fragment>
     );
   } else if (odata.length > 0 && olinks.length > 0) {
     return (
       <Fragment>
-        <Fade duration={2000} triggerOnce>
-          <div id="other-projects" className="other-projects-title">
-            <p className="other-title">Other Projects</p>
-          </div>
-        </Fade>
+        <OtherProjectsTitle />
         <div className="other-div">
           {odata.map((element, index, arr) => {
             return (
               <OtherProjectsPDiv
+                key={index}
                 odata={odata[index]}
                 olinks={olinks[index].split(" ")}
                 oimage={oimage[index]}
               />
             );
           })}
-          {/* <OtherProjectsPDiv odata={odata} olinks={olinks} oimage={oimage}/> */}
-          {/* <div className="other-projects">
-            <div className="other-info">
-              <ReactMarkdown className="mark-test" children={odata[0]} />
-              <div className="other-project-button-div">
-                <button
-                  className="other-project-button"
-                  onClick={() => window.open(links[0], "_blank")}
-                >
-                  See Live
-                </button>
-                <button
-                  className="other-project-button"
-                  onClick={() => window.open(links[1], "_blank")}
-                >
-                  Source Code
-                </button>
-              </div>
-            </div>
-            <div className="other-img-div">
-              <img
-                alt="mike trout face"
-                width={512}
-                height={512}
-                className="other-img"
-                src="https://cdn.discordapp.com/attachments/788247984517283880/991961353545855026/troutface.webp"
-              ></img>
-            </div>
-          </div>
-          <div className="other-projects">
-            <div className="other-info">
-              <ReactMarkdown className="mark-test" children={odata[1]} />
-              <div className="other-project-button-div">
-                <button
-                  disabled
-                  className="other-project-button-grey"
-                  onClick={() => window.open(links3[0], "_blank")}
-                >
-                  See Live
-                </button>
-                <button
-                  className="other-project-button"
-                  onClick={() => window.open(links2[1], "_blank")}
-                >
-                  Source Code
-                </button>
-              </div>
-            </div>
-            <div className="other-img-div">
-              <img
-                alt="secret message"
-                width={512}
-                height={512}
-                className="other-img"
-                src="https://cdn.discordapp.com/attachments/788247984517283880/991961354095317142/secret.webp"
-              ></img>
-            </div>
-          </div>
-          <div className="other-projects">
-            <div className="other-info">
-              <ReactMarkdown className="mark-test" children={odata[2]} />
-              <div className="other-project-button-div">
-                <button
-                  className="other-project-button"
-                  onClick={() => window.open(links3[0], "_blank")}
-                >
-                  See Live
-                </button>
-                <button
-                  className="other-project-button"
-                  onClick={() => window.open(links3[1], "_blank")}
-                >
-                  Source Code
-                </button>
-              </div>
-            </div>
-            <div className="other-img-div">
-              <img
-                alt="pong"
-                width={512}
-                height={512}
-                className="other-img"
-                src="https://cdn.discordapp.com/attachments/788247984517283880/991961353822675015/pong.webp"
-              ></img>
-            </div>
-          </div> */}
         </div>
       </Fragment>
     );

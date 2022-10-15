@@ -1,9 +1,8 @@
 import React, { Fragment, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { data } from "./OtherProjectsData.js";
-import { Fade } from "react-awesome-reveal";
-
 import "./OtherProjectsM.css";
-const OtherProjectsM = () => {
+const OtherProjectsM = ({ odata, olinks, oimage, setPick }) => {
   const [select, setSelect] = useState(0);
   const enter = (event) => {
     event.target.style.backgroundPosition = "0, 0";
@@ -27,43 +26,35 @@ const OtherProjectsM = () => {
     event.target.style.backgroundPosition = "100% 0";
     // Update state to render new project
     setSelect(button - 1);
+    setPick(button - 1);
   };
   return (
     <Fragment>
-      <Fade duration={2000} triggerOnce>
-        <div id="other-projects" className="other-projects-title">
-          <p className="other-title">Other Projects</p>
-        </div>
-      </Fade>
       <div className="mobile-projects">
         <div className="mobile-projects-info">
-          <p className="mobile-projects-title">{data[select].title}</p>
-          <p className="mobile-projects-text">{data[select].text}</p>
+          <ReactMarkdown className="mark-test" children={odata} />
           <div className="mobile-projects-button-div">
             {/* Disabled button for secret message live demo */}
-            {data[select].title === "Secret Message" ? (
+            {oimage ===
+            "https://cdn.discordapp.com/attachments/788247984517283880/991961354095317142/secret.webp" ? (
               <button
                 disabled
                 className="mobile-projects-button-grey"
-                onClick={() =>
-                  window.open(`${data[select].links[0]}`, "_blank")
-                }
+                onClick={() => window.open(olinks[0], "_blank")}
               >
                 See Live
               </button>
             ) : (
               <button
                 className="mobile-projects-button"
-                onClick={() =>
-                  window.open(`${data[select].links[0]}`, "_blank")
-                }
+                onClick={() => window.open(olinks[0], "_blank")}
               >
                 See Live
               </button>
             )}
             <button
               className="mobile-projects-button"
-              onClick={() => window.open(`${data[select].links[1]}`, "_blank")}
+              onClick={() => window.open(olinks, "_blank")}
             >
               Source Code
             </button>
@@ -75,7 +66,7 @@ const OtherProjectsM = () => {
             width={512}
             height={512}
             className="mobile-projects-img"
-            src={data[select].image}
+            src={oimage}
           ></img>
         </div>
         <div className="select-button-div">

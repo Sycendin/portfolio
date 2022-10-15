@@ -1,10 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
 import OtherProjectsM from "./OtherProjectsMobile/OtherProjectsM";
 import OtherProjectsLoad from "../../Features/Load/OtherProjectsLoad/OtherProjectsLoad";
 import { OtherProjectsTitle } from "./OtherProjectsTitle/OtherProjectsTitle";
 import { OtherProjectsPDiv } from "./OtherProjectsPDiv/OtherProjectsPDiv";
-// import { Fade } from "react-awesome-reveal";
 import "./OtherProjects.css";
 
 const OtherProjects = () => {
@@ -12,6 +10,7 @@ const OtherProjects = () => {
   const [odata, setOData] = useState("Test");
   const [oimage, setOImage] = useState([]);
   const [olinks, setOLinks] = useState([]);
+  const [pick, setPick] = useState([0]);
   const otherprojectinfo = ["oprojects", "oprojectimages", "oprojectlinks"];
   useEffect(() => {
     const handleResize = () => {
@@ -53,18 +52,26 @@ const OtherProjects = () => {
   if (width <= 870 && odata.length < 1 && olinks.length < 1) {
     return (
       <Fragment>
+        <OtherProjectsTitle />
         <OtherProjectsLoad />
       </Fragment>
     );
   } else if (width <= 870) {
     return (
       <Fragment>
-        <OtherProjectsM />
+        <OtherProjectsTitle />
+        <OtherProjectsM
+          odata={odata[pick]}
+          olinks={olinks[pick]}
+          oimage={oimage[pick]}
+          setPick={setPick}
+        />
       </Fragment>
     );
   } else if (odata.length < 1 && olinks.length < 1) {
     return (
       <Fragment>
+        <OtherProjectsTitle />
         <OtherProjectsLoad />
       </Fragment>
     );
@@ -73,7 +80,7 @@ const OtherProjects = () => {
       <Fragment>
         <OtherProjectsTitle />
         <div className="other-div">
-          {odata.map((element, index, arr) => {
+          {odata.map((element, index) => {
             return (
               <OtherProjectsPDiv
                 key={index}

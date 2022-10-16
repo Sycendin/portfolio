@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import ReactMarkdown from "react-markdown";
-import { projectData } from "../ProjectData/ProjectData";
 import { Link } from "react-router-dom";
 const EachProject = ({ position, imgSwitch, img, data, image, links }) => {
   let slink = [];

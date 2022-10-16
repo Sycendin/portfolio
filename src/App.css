@@ -1,15 +1,18 @@
 .App {
   text-align: center;
 }
+/* Darkmode CSS */
 .light{
   background-color: white;
 }
 .dark{
   background-color: #282c34;
 }
+/* Min-height CSS */
 .min-height{
   min-height: 100vh;
 }
+/* Loading screen CSS */
 .fmargin{
   margin-top: 8px;
   margin-bottom: 8px;
@@ -32,7 +35,7 @@
 	background-size: 400% 400%;
 	animation: gradient 3s ease infinite;
 }
-
+/* Regular Buttons */
 button{
   display: flex;
   font-size: calc(16px + 0.5vw);
@@ -52,6 +55,26 @@ button{
 button:hover{
   background-position:0 0;
   color: white;
+}
+/* Mobile Project Buttons */
+.mobile-projects-button-grey{
+  display: flex;
+  font-size: calc(16px + 0.5vw);
+  color: rgb(77, 77, 77);
+  width: auto;
+  margin-top: 8px;
+  margin-right: 8px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: linear-gradient(to right, #1babff 0%, #41c4ce 50%, rgb(165, 165, 165)  50%, rgb(165, 165, 165) 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.3s;
+  border-radius: 10px;
+}
+.mobile-projects-button-grey:hover{
+  background-position:100% 0;
+  color: rgb(77, 77, 77);
 }
 
 @keyframes gradient {

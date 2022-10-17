@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import ReactMarkdown from "react-markdown";
-import { data } from "./OtherProjectsData.js";
+import { MobileImage } from "./MobileDiv/MobileImage/MobileImage";
+import { MobileButton } from "./MobileDiv/MobileButtons/MobileButtons";
 import "./OtherProjectsM.css";
 const OtherProjectsM = ({ odata, olinks, oimage, setPick }) => {
-  const [select, setSelect] = useState(0);
   const enter = (event) => {
     event.target.style.backgroundPosition = "0, 0";
   };
@@ -25,7 +25,6 @@ const OtherProjectsM = ({ odata, olinks, oimage, setPick }) => {
     event.target.style.backgroundSize = "200% 100%";
     event.target.style.backgroundPosition = "100% 0";
     // Update state to render new project
-    setSelect(button - 1);
     setPick(button - 1);
   };
   return (
@@ -60,47 +59,8 @@ const OtherProjectsM = ({ odata, olinks, oimage, setPick }) => {
             </button>
           </div>
         </div>
-        <div className="mobile-projects-img-div">
-          <img
-            alt="secret message"
-            width={512}
-            height={512}
-            className="mobile-projects-img"
-            src={oimage}
-          ></img>
-        </div>
-        <div className="select-button-div">
-          <button
-            className="select-button select"
-            onClick={changeSelect}
-            onMouseEnter={enter}
-            onTouchStart={enter}
-            onTouchEnd={close}
-            onMouseLeave={close}
-          >
-            1
-          </button>
-          <button
-            className="select-button select"
-            onClick={changeSelect}
-            onMouseEnter={enter}
-            onTouchStart={enter}
-            onTouchEnd={close}
-            onMouseLeave={close}
-          >
-            2
-          </button>
-          <button
-            className="select-button select"
-            onClick={changeSelect}
-            onMouseEnter={enter}
-            onTouchStart={enter}
-            onTouchEnd={close}
-            onMouseLeave={close}
-          >
-            3
-          </button>
-        </div>
+        <MobileImage oimage={oimage} />
+        <MobileButton changeSelect={changeSelect} enter={enter} close={close} />
       </div>
     </Fragment>
   );

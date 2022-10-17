@@ -7,12 +7,16 @@ import "./OtherProjects.css";
 
 const OtherProjects = () => {
   const [width, setWidth] = useState(window.innerWidth);
-  const [odata, setOData] = useState("Test");
-  const [oimage, setOImage] = useState([]);
+  const [odata, setOData] = useState([]);
+  // Set default image
+  const [oimage, setOImage] = useState(
+    "https://cdn.discordapp.com/attachments/788247984517283880/991961353545855026/troutface.webp"
+  );
   const [olinks, setOLinks] = useState([]);
   const [pick, setPick] = useState([0]);
-  const otherprojectinfo = ["oprojects", "oprojectimages", "oprojectlinks"];
+
   useEffect(() => {
+    const otherprojectinfo = ["oprojects", "oprojectimages", "oprojectlinks"];
     const handleResize = () => {
       setWidth(window.innerWidth);
     };

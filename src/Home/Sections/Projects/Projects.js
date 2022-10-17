@@ -17,7 +17,7 @@ const Projects = () => {
   const [projectLoad, setProjectLoad] = useState("Test");
   const [projectImage, setProjectImage] = useState([]);
   const [projectLinks, setProjectLinks] = useState([]);
-  const projectinfo = ["projects", "projectimages", "projectlinks"];
+
   const mode = useMode();
   // Switch between images depending on mouse enter/leave
   const imgSwitch = (img) => {
@@ -63,6 +63,7 @@ const Projects = () => {
     }
   };
   useEffect(() => {
+    const projectinfo = ["projects", "projectimages", "projectlinks"];
     const getPData = async () => {
       // Make 2 fetches to server, one for text data and one for image data
       for (let i = 0; i < 3; i++) {

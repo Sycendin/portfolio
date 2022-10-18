@@ -53,7 +53,7 @@ const OtherProjects = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   // If width is small enough, render condensed other projects
-  if (width <= 870 && odata.length < 1 && olinks.length < 1) {
+  if (width <= 870 && (odata.length === 0 || olinks.length === 0)) {
     return (
       <Fragment>
         <OtherProjectsTitle />
@@ -72,7 +72,7 @@ const OtherProjects = () => {
         />
       </Fragment>
     );
-  } else if (odata.length < 1 && olinks.length < 1) {
+  } else if (odata.length === 0 || olinks.length === 0) {
     return (
       <Fragment>
         <OtherProjectsTitle />

@@ -16,6 +16,7 @@ This is the portfolio website that I created to showcase my various projects tha
 ```
 "react-awesome-reveal": "^3.8.1",
 "react-dom": "^18.2.0",
+"react-markdown": "^8.0.3",
 "react-router-dom": "^6.3.0",
 ```
 ## Installation

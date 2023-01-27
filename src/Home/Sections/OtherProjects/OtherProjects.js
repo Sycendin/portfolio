@@ -28,7 +28,7 @@ const OtherProjects = () => {
       // Make 2 fetches to server, one for text data and one for image data
       for (let i = 0; i < 3; i++) {
         const content = await fetch(
-          `https://yu-game.herokuapp.com/multimarkdown/${otherprojectinfo[i]}`,
+          `https://gserver.onrender.com/multimarkdown/${otherprojectinfo[i]}`,
           {
             method: "GET",
             headers: {
